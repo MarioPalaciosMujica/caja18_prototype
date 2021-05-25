@@ -49,8 +49,7 @@ namespace Catalog.API.Services.Implementations
             if(entity != null)
             {
                 entity.ModifiedDate = new DateTime();
-                await _categoryRepository.Modify(entity);
-                return _mapper.Map<CategoryModel>(entity);
+                return _mapper.Map<CategoryModel>(await _categoryRepository.Modify(entity));
             }
             else
             {

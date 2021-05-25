@@ -19,7 +19,8 @@ namespace Catalog.API.Controllers
         }
 
         [HttpPost]
-        [ProducesResponseType(typeof(CategoryModel), (int)HttpStatusCode.OK)]
+        [Route(null, Name = "Create")]
+        [ProducesResponseType(typeof(CategoryModel), (int)HttpStatusCode.Created)]
         public async Task<ActionResult<CategoryModel>> Create([FromBody] CategoryModel model)
         {
             return Ok(await _categoryService.Create(model));

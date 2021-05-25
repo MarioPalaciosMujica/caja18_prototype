@@ -7,7 +7,7 @@ namespace Catalog.API.Services.Contracts
 {
     public interface IProductService
     {
-        Task<ProductModel> GetById(int productId);
+        Task<ProductModel> GetById(int id);
 
         Task<IEnumerable<ProductModel>> GetAll();
 

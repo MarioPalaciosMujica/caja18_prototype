@@ -5,6 +5,7 @@ using Catalog.API.Models;
 using Catalog.API.Repositories.Contracts;
 using Catalog.API.Services.Contracts;
 using AutoMapper;
+using Catalog.API.Entities;
 
 namespace Catalog.API.Services.Implementations
 {
@@ -19,34 +20,48 @@ namespace Catalog.API.Services.Implementations
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
-        public Task<ProductModel> Create(ProductModel model)
+        public async Task<ProductModel> Create(ProductModel model)
         {
-            throw new NotImplementedException();
+            Product entity = await _productRepository.Create(_mapper.Map<Product>(model));
+            return _mapper.Map<ProductModel>(entity);
         }
 
-        public Task<bool> DeleteById(int id)
+        public async Task<bool> DeleteById(int id)
         {
-            throw new NotImplementedException();
+            return await _productRepository.DeleteById(id);
         }
 
-        public Task<IEnumerable<ProductModel>> GetAll()
+        public async Task<IEnumerable<ProductModel>> GetAll()
         {
-            throw new NotImplementedException();
+            IEnumerable<Product> entities = await _productRepository.GetAll();
+            return _mapper.Map<IEnumerable<ProductModel>>(entities);
         }
 
-        public Task<IEnumerable<ProductModel>> GetByCategoryId(int categoryId)
+        public async Task<IEnumerable<ProductModel>> GetByCategoryId(int categoryId)
         {
-            throw new NotImplementedException();
+            IEnumerable<Product> entities = await _productRepository.GetByCategoryId(categoryId);
+            return _mapper.Map<IEnumerable<ProductModel>>(entities);
         }
 
-        public Task<ProductModel> GetById(int productId)
+        public async Task<ProductModel> GetById(int id)
         {
-            throw new NotImplementedException();
+            Product entity = await _productRepository.GetById(id);
+            return _mapper.Map<ProductModel>(entity);
         }
 
-        public Task<ProductModel> Modify(ProductModel model)
+        public async Task<ProductModel> Modify(ProductModel model)
         {
-            throw new NotImplementedException();
+            Product entity = await _productRepository.GetById(model.ProductId);
+            if(entity != null)
+            {
+                entity.ModifiedDate = new DateTime();
+                return _mapper.Map<ProductModel>(await _productRepository.Modify(entity));
+            }
+            else
+            {
+                return null;
+            }
+            
         }
     }
 }
