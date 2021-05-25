@@ -8,9 +8,12 @@
               <Node name="Catalog" expanded="True">
                 <Node name="Catalog.API" expanded="True">
                   <Node name="Controllers" expanded="True">
-                    <Node name="WeatherForecastController.cs" selected="True" />
+                    <Node name="CategoryController.cs" selected="True" />
                   </Node>
-                  <Node name="Properties" expanded="True" />
+                  <Node name="Repositories" expanded="True">
+                    <Node name="Contracts" expanded="True" />
+                    <Node name="Implementations" expanded="True" />
+                  </Node>
                 </Node>
               </Node>
             </Node>
@@ -19,8 +22,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Microservices.Payments.Payments.API FirstBuild="True" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Microservices.Orders.Orders.API FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.Microservices.Catalog.Catalog.API FirstBuild="True" PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
