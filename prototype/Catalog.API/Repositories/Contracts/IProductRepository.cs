@@ -7,7 +7,7 @@ namespace Catalog.API.Repositories.Contracts
 {
     public interface IProductRepository
     {
-        Task<Product> GetById(int productId);
+        Task<Product> GetById(int id);
 
         Task<IEnumerable<Product>> GetAll();
 

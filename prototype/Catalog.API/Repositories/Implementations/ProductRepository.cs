@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Catalog.API.Data;
 using Catalog.API.Entities;
 using Catalog.API.Repositories.Contracts;
 
@@ -8,41 +9,48 @@ namespace Catalog.API.Repositories.Implementations
 {
     public class ProductRepository : IProductRepository
     {
-        private readonly ICatalogContext _catalogContext;
+        private readonly CatalogContext _catalogContext;
 
-        public ProductRepository(ICatalogContext catalogContext)
+        public ProductRepository(CatalogContext catalogContext)
         {
             _catalogContext = catalogContext ?? throw new ArgumentNullException(nameof(catalogContext));
         }
 
-        public Task<Product> Create(Product entity)
+        public async Task<Product> Create(Product entity)
+        {
+            await _catalogContext.Products.AddAsync(entity);
+            await _catalogContext.SaveChangesAsync();
+            return entity;
+        }
+
+        public async Task<bool> DeleteById(int id)
+        {
+            Product entity = await _catalogContext.Products.FindAsync(id);
+            _catalogContext.Products.Remove(entity);
+            await _catalogContext.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<IEnumerable<Product>> GetAll()
+        {
+            return _catalogContext.Products;
+        }
+
+        public async Task<IEnumerable<Product>> GetByCategoryId(int categoryId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> DeleteById(int id)
+        public async Task<Product> GetById(int id)
         {
-            throw new NotImplementedException();
+            return await _catalogContext.Products.FindAsync(id);
         }
 
-        public Task<IEnumerable<Product>> GetAll()
+        public async Task<Product> Modify(Product entity)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<Product>> GetByCategoryId(int categoryId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Product> GetById(int productId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Product> Modify(Product entity)
-        {
-            throw new NotImplementedException();
+            _catalogContext.Products.Update(entity);
+            await _catalogContext.SaveChangesAsync();
+            return entity;
         }
     }
 }

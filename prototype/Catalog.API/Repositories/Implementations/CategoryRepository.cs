@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Catalog.API.Data;
 using Catalog.API.Entities;
 using Catalog.API.Repositories.Contracts;
 
@@ -8,36 +9,43 @@ namespace Catalog.API.Repositories.Implementations
 {
     public class CategoryRepository : ICategoryRepository
     {
-        private readonly ICatalogContext _catalogContext;
+        private readonly CatalogContext _catalogContext;
 
-        public CategoryRepository(ICatalogContext catalogContext)
+        public CategoryRepository(CatalogContext catalogContext)
         {
             _catalogContext = catalogContext ?? throw new ArgumentNullException(nameof(catalogContext));
         }
 
-        public Task<Category> Create(Category entity)
+        public async Task<Category> Create(Category entity)
         {
-            throw new NotImplementedException();
+            await _catalogContext.Categories.AddAsync(entity);
+            await _catalogContext.SaveChangesAsync();
+            return entity;
         }
 
-        public Task<bool> DeleteById(int id)
+        public async Task<bool> DeleteById(int id)
         {
-            throw new NotImplementedException();
+            Category entity = await _catalogContext.Categories.FindAsync(id);
+            _catalogContext.Categories.Remove(entity);
+            await _catalogContext.SaveChangesAsync();
+            return true;
         }
 
-        public Task<IEnumerable<Category>> GetAll()
+        public async Task<IEnumerable<Category>> GetAll()
         {
-            throw new NotImplementedException();
+            return _catalogContext.Categories;
         }
 
-        public Task<Category> GetById(int id)
+        public async Task<Category> GetById(int id)
         {
-            throw new NotImplementedException();
+            return await _catalogContext.Categories.FindAsync(id);
         }
 
-        public Task<Category> Modify(Category entity)
+        public async Task<Category> Modify(Category entity)
         {
-            throw new NotImplementedException();
+            _catalogContext.Categories.Update(entity);
+            await _catalogContext.SaveChangesAsync();
+            return entity;
         }
     }
 }
