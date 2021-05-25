@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Catalog.API.Controllers
 {
     [ApiController]
-    [Route("api/v1/[controller]")]
+    [Route("[controller]")]
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryService _categoryService;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Catalog.API.Data;
 using Catalog.API.Entities;
 using Catalog.API.Repositories.Contracts;
@@ -33,12 +34,18 @@ namespace Catalog.API.Repositories.Implementations
 
         public async Task<IEnumerable<Category>> GetAll()
         {
-            return _catalogContext.Categories;
+            return await _catalogContext
+                .Categories
+                .Include(x => true)
+                .ToListAsync();
         }
 
         public async Task<Category> GetById(int id)
         {
-            return await _catalogContext.Categories.FindAsync(id);
+            return await _catalogContext
+                .Categories
+                .Include(cat => cat.CategoryId == id)
+                .FirstOrDefaultAsync();
         }
 
         public async Task<Category> Modify(Category entity)
