@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{AE5DAAC5-CCA4-4BF3-8DD6-7D4BA33FA845}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Catalog.API/Services/Implementations/CategoryService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Catalog.API/Controllers/ProductController.cs">
     <Files>
-      <File FileName="Catalog.API/Services/Implementations/ProductService.cs" Line="33" Column="1" />
-      <File FileName="Catalog.API/Services/Implementations/CatalogService.cs" Line="61" Column="1" />
-      <File FileName="Catalog.API/Controllers/CategoryController.cs" Line="40" Column="1" />
+      <File FileName="Catalog.API/Controllers/CategoryController.cs" Line="18" Column="10" />
+      <File FileName="Catalog.API/Controllers/ProductController.cs" Line="46" Column="1" />
+      <File FileName="Catalog.API/Services/Implementations/ProductService.cs" Line="15" Column="42" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,18 +12,15 @@
             <Node name="Microservices" expanded="True">
               <Node name="Catalog" expanded="True">
                 <Node name="Catalog.API" expanded="True">
-                  <Node name="Controllers" expanded="True" />
+                  <Node name="Controllers" expanded="True">
+                    <Node name="ProductController.cs" selected="True" />
+                  </Node>
                   <Node name="Entities" expanded="True" />
                   <Node name="Models" expanded="True" />
-                  <Node name="Repositories" expanded="True">
-                    <Node name="Contracts" expanded="True" />
-                    <Node name="Implementations" expanded="True" />
-                  </Node>
+                  <Node name="Repositories" expanded="True" />
                   <Node name="Services" expanded="True">
                     <Node name="Contracts" expanded="True" />
-                    <Node name="Implementations" expanded="True">
-                      <Node name="CategoryService.cs" selected="True" />
-                    </Node>
+                    <Node name="Implementations" expanded="True" />
                   </Node>
                 </Node>
               </Node>
