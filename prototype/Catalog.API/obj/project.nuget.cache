@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "fZ1MxHNmcqotzfWP0JqHph7eF3qsDSigVrYYOjvGuefrOXT3sdrObV9poFem2o+Io5jqlv3HAD1zRfitHKLO5Q==",
+  "dgSpecHash": "LNleYFxydd21W5GVmCVZ9MrZkqVv3KnbvcEteJ4EIvfWppb33ATygEEAc0yJk+jDKZu49tzzFRX1DJixJm1VhA==",
   "success": true,
   "projectFilePath": "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/Catalog.API.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/mario/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
+    "/Users/mario/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "/Users/mario/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/Users/mario/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/3.0.0/microsoft.extensions.dependencyinjection.abstractions.3.0.0.nupkg.sha512",
+    "/Users/mario/.nuget/packages/microsoft.extensions.options/3.0.0/microsoft.extensions.options.3.0.0.nupkg.sha512",
+    "/Users/mario/.nuget/packages/microsoft.extensions.primitives/3.0.0/microsoft.extensions.primitives.3.0.0.nupkg.sha512",
+    "/Users/mario/.nuget/packages/system.reflection.emit/4.7.0/system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

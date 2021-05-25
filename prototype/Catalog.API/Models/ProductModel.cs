@@ -1,7 +1,7 @@
 ﻿using System;
-namespace Catalog.API.Entities
+namespace Catalog.API.Models
 {
-    public class Product
+    public class ProductModel
     {
         public int ProductId { get; set; }
         public string Name { get; set; }
@@ -9,7 +9,7 @@ namespace Catalog.API.Entities
         public string ImageUrl { get; set; }
         public int Stock { get; set; }
         public decimal PriceAmount { get; set; }
-        public Category Category { get; set; }
+        public CategoryModel Category { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
     }

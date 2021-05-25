@@ -15,7 +15,7 @@ namespace Catalog.API.Repositories.Implementations
             _catalogContext = catalogContext ?? throw new ArgumentNullException(nameof(catalogContext));
         }
 
-        public Task<Category> Create()
+        public Task<Category> Create(Category entity)
         {
             throw new NotImplementedException();
         }
@@ -35,7 +35,7 @@ namespace Catalog.API.Repositories.Implementations
             throw new NotImplementedException();
         }
 
-        public Task<Category> Modify()
+        public Task<Category> Modify(Category entity)
         {
             throw new NotImplementedException();
         }
