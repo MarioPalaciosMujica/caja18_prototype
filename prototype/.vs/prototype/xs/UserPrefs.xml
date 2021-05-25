@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{AE5DAAC5-CCA4-4BF3-8DD6-7D4BA33FA845}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Prototype" expanded="True">
+            <Node name="Microservices" expanded="True">
+              <Node name="Catalog" expanded="True">
+                <Node name="Catalog.API" expanded="True">
+                  <Node name="Controllers" expanded="True">
+                    <Node name="WeatherForecastController.cs" selected="True" />
+                  </Node>
+                  <Node name="Properties" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Microservices.Catalog.Catalog.API FirstBuild="True" PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
