@@ -20,41 +20,41 @@ namespace Catalog.API.Controllers
         }
 
         [HttpGet]
-        [Route("{id}", Name = "GetById")]
+        [Route("[action]/{id}", Name = "GetCategoryById")]
         [ProducesResponseType(typeof(ProductModel), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<CategoryModel>> GetById(int id)
+        public async Task<ActionResult<CategoryModel>> GetCategoryById(int id)
         {
             return Ok(await _categoryService.GetById(id));
         }
 
         [HttpGet]
-        [Route(null, Name = "GetAll")]
+        [Route("GetAllCategories")]
         [ProducesResponseType(typeof(IEnumerable<ProductModel>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<ProductModel>>> GetAll()
+        public async Task<ActionResult<IEnumerable<ProductModel>>> GetAllCategories()
         {
             return Ok(await _categoryService.GetAll());
         }
 
         [HttpPost]
-        [Route(null, Name = "Create")]
+        [Route("CreateCategory")]
         [ProducesResponseType(typeof(CategoryModel), (int)HttpStatusCode.Created)]
-        public async Task<ActionResult<CategoryModel>> Create([FromBody] CategoryModel model)
+        public async Task<ActionResult<CategoryModel>> CreateCategory([FromBody] CategoryModel model)
         {
             return Ok(await _categoryService.Create(model));
         }
 
         [HttpPut]
-        [Route(null, Name = "Modify")]
+        [Route("ModifyCategory")]
         [ProducesResponseType(typeof(ProductModel), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<CategoryModel>> Modify([FromBody] CategoryModel model)
+        public async Task<ActionResult<CategoryModel>> ModifyCategory([FromBody] CategoryModel model)
         {
             return Ok(await _categoryService.Modify(model));
         }
 
         [HttpDelete]
-        [Route("{id}", Name = "Delete")]
+        [Route("[action]/{id}", Name = "DeleteCategory")]
         [ProducesResponseType(typeof(bool), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<bool>> Delete(int id)
+        public async Task<ActionResult<bool>> DeleteCategory(int id)
         {
             return Ok(await _categoryService.DeleteById(id));
         }

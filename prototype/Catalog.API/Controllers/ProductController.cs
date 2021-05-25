@@ -20,49 +20,49 @@ namespace Catalog.API.Controllers
         }
 
         [HttpGet]
-        [Route("{id}", Name = "GetById")]
+        [Route("[action]/{id}", Name = "GetProductById")]
         [ProducesResponseType(typeof(ProductModel), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<ProductModel>> GetById(int id)
+        public async Task<ActionResult<ProductModel>> GetProductById(int id)
         {
             return Ok(await _productService.GetById(id));
         }
 
         [HttpGet]
-        [Route("{categoryId}", Name = "GetByCategoryId")]
+        [Route("[action]/{categoryId}", Name = "GetproductByCategoryId")]
         [ProducesResponseType(typeof(IEnumerable<ProductModel>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<ProductModel>>> GetByCategoryId(int categoryId)
+        public async Task<ActionResult<IEnumerable<ProductModel>>> GetproductByCategoryId(int categoryId)
         {
             return Ok(await _productService.GetByCategoryId(categoryId));
         }
 
         [HttpGet]
-        [Route(null, Name = "GetAll")]
+        [Route("GetAllProducts")]
         [ProducesResponseType(typeof(IEnumerable<ProductModel>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<ProductModel>>> GetAll()
+        public async Task<ActionResult<IEnumerable<ProductModel>>> GetAllProducts()
         {
             return Ok(await _productService.GetAll());
         }
 
         [HttpPost]
-        [Route(null, Name = "Create")]
+        [Route("CreateProduct")]
         [ProducesResponseType(typeof(ProductModel), (int)HttpStatusCode.Created)]
-        public async Task<ActionResult<ProductModel>> Create([FromBody] ProductModel model)
+        public async Task<ActionResult<ProductModel>> CreateProduct([FromBody] ProductModel model)
         {
             return Ok(await _productService.Create(model));
         }
 
         [HttpPut]
-        [Route(null, Name = "Modify")]
+        [Route("ModifyProduct")]
         [ProducesResponseType(typeof(ProductModel), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<ProductModel>> Modify([FromBody] ProductModel model)
+        public async Task<ActionResult<ProductModel>> ModifyProduct([FromBody] ProductModel model)
         {
             return Ok(await _productService.Modify(model));
         }
 
         [HttpDelete]
-        [Route("{id}", Name = "Delete")]
+        [Route("[action]/{id}", Name = "DeleteProduct")]
         [ProducesResponseType(typeof(bool), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<bool>> Delete(int id)
+        public async Task<ActionResult<bool>> DeleteProduct(int id)
         {
             return Ok(await _productService.DeleteById(id));
         }

@@ -1,9 +1,7 @@
 ﻿<Properties StartupConfiguration="{AE5DAAC5-CCA4-4BF3-8DD6-7D4BA33FA845}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Catalog.API/Startup.cs">
     <Files>
-      <File FileName="Catalog.API/Repositories/Implementations/CategoryRepository.cs" Line="32" Column="20" />
-      <File FileName="Catalog.API/Repositories/Implementations/ProductRepository.cs" Line="44" Column="10" />
-      <File FileName="Catalog.API/Startup.cs" Line="1" Column="1" />
+      <File FileName="Catalog.API/Startup.cs" Line="87" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,10 +11,10 @@
               <Node name="Catalog" expanded="True">
                 <Node name="Catalog.API" expanded="True">
                   <Node name="Controllers" expanded="True" />
+                  <Node name="Data" expanded="True" />
                   <Node name="Repositories" expanded="True">
                     <Node name="Implementations" expanded="True" />
                   </Node>
-                  <Node name="Services" expanded="True" />
                   <Node name="Startup.cs" selected="True" />
                 </Node>
               </Node>
@@ -24,12 +22,14 @@
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Microservices.Payments.Payments.API FirstBuild="True" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Microservices.Orders.Orders.API FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.Microservices.Catalog.Catalog.API PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

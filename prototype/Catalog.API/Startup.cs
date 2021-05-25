@@ -32,8 +32,17 @@ namespace Catalog.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Inkeccion de dependecias para Database InMemory
-            services.AddDbContext<CatalogContext>(options => options.UseInMemoryDatabase("CatalogDb"));
+            // Injeccion de dependecias para Database InMemory
+            services.AddDbContext<CatalogContext>(options =>
+                options.UseInMemoryDatabase("CatalogDb")
+            );
+
+            //services.AddEntityFrameworkInMemoryDatabase();
+            //services.AddDbContext<CatalogContext>(options =>
+            //{
+            //    options.UseInMemoryDatabase("CatalogDb");
+            //});
+
 
             // Mapper Config
             IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
