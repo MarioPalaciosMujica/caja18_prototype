@@ -11,8 +11,6 @@ namespace Payments.API.Repositories.Contracts
 
         Task<IEnumerable<PaymentOrder>> GetAll();
 
-        Task<IEnumerable<PaymentOrder>> GetAllByUserName(string userName);
-
         Task<PaymentOrder> Create(PaymentOrder entity);
 
         Task<PaymentOrder> Modify(PaymentOrder entity);

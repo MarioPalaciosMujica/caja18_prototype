@@ -45,12 +45,6 @@ namespace Payments.API.Services.Implementations
             return _mapper.Map<IEnumerable<PaymentOrderModel>>(entities);
         }
 
-        public async Task<IEnumerable<PaymentOrderModel>> GetAllByUserName(string userName)
-        {
-            IEnumerable<PaymentOrder> entities = await _paymentOrderRepository.GetAllByUserName(userName);
-            return _mapper.Map<IEnumerable<PaymentOrderModel>>(entities);
-        }
-
         public async Task<PaymentOrderModel> GetById(int id)
         {
             PaymentOrder entity = await _paymentOrderRepository.GetById(id);

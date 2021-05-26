@@ -35,14 +35,6 @@ namespace Payments.API.Controllers
             return Ok(await _paymentOrderService.GetAll());
         }
 
-        [HttpGet]
-        [Route("[action]/{id}", Name = "GetAllPaymentOrdersByUserName")]
-        [ProducesResponseType(typeof(IEnumerable<PaymentOrderModel>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<PaymentOrderModel>>> GetAllPaymentOrdersByUserName(string userName)
-        {
-            return Ok(await _paymentOrderService.GetAllByUserName(userName));
-        }
-
         [HttpPost]
         [Route("CreatePaymentOrder")]
         [ProducesResponseType(typeof(PaymentOrderModel), (int)HttpStatusCode.Created)]

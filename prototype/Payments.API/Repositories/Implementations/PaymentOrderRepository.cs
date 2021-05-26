@@ -28,17 +28,11 @@ namespace Payments.API.Repositories.Implementations
         {
             PaymentOrder entity = await _paymentContext.PaymentOrders.FindAsync(id);
             _paymentContext.PaymentOrders.Remove(entity);
+            await _paymentContext.SaveChangesAsync();
             return true;
         }
 
         public async Task<IEnumerable<PaymentOrder>> GetAll()
-        {
-            return await _paymentContext
-                .PaymentOrders
-                .ToListAsync();
-        }
-
-        public async Task<IEnumerable<PaymentOrder>> GetAllByUserName(string userName)
         {
             return await _paymentContext
                 .PaymentOrders

@@ -4,7 +4,6 @@ namespace Payments.API.Models
     public class PaymentOrderModel
     {
         public int PaymentOrderId { get; set; }
-        public string UserName { get; set; }
         public string BankName { get; set; }
         public string PaymentMethod { get; set; }
         public decimal Amount { get; set; }
