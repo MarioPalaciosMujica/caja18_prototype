@@ -1,18 +1,39 @@
 ﻿<Properties StartupConfiguration="{2CCD39B1-EC60-423A-A695-FC91680FC9F5}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Orders.API/Services/Contracts/IPurchaseOrderService.cs">
+    <Files>
+      <File FileName="Orders.API/Controllers/PurchaseOrderController.cs" Line="38" Column="1" />
+      <File FileName="Payments.API/Controllers/PaymentOrderController.cs" Line="1" Column="1" />
+      <File FileName="Orders.API/Services/Contracts/IPurchaseOrderService.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Prototype" expanded="True">
             <Node name="Microservices" expanded="True">
-              <Node name="Catalog" expanded="True" />
-              <Node name="Orders" expanded="True" />
-              <Node name="Payments" expanded="True">
-                <Node name="Payments.API" expanded="True" selected="True">
+              <Node name="Orders" expanded="True">
+                <Node name="Orders.API" expanded="True">
                   <Node name="Controllers" expanded="True" />
                   <Node name="Data" expanded="True" />
+                  <Node name="Entities" expanded="True" />
+                  <Node name="Models" expanded="True" />
                   <Node name="Properties" expanded="True" />
                   <Node name="Repositories" expanded="True">
+                    <Node name="Contracts" expanded="True" />
+                    <Node name="Implementations" expanded="True" />
+                  </Node>
+                  <Node name="Services" expanded="True">
+                    <Node name="Contracts" expanded="True">
+                      <Node name="IPurchaseOrderService.cs" selected="True" />
+                    </Node>
+                    <Node name="Implementations" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Payments" expanded="True">
+                <Node name="Payments.API" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                  <Node name="Repositories" expanded="True" />
+                  <Node name="Services" expanded="True">
                     <Node name="Implementations" expanded="True" />
                   </Node>
                 </Node>
