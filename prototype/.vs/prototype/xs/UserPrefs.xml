@@ -1,9 +1,8 @@
-﻿<Properties StartupConfiguration="{2CCD39B1-EC60-423A-A695-FC91680FC9F5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Orders.API/Services/Contracts/IPurchaseOrderService.cs">
+﻿<Properties StartupConfiguration="{E8546626-E8F5-4128-BF1A-78C110452E85}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Orders.API/Data/OrderSeed.cs">
     <Files>
-      <File FileName="Orders.API/Controllers/PurchaseOrderController.cs" Line="38" Column="1" />
-      <File FileName="Payments.API/Controllers/PaymentOrderController.cs" Line="1" Column="1" />
-      <File FileName="Orders.API/Services/Contracts/IPurchaseOrderService.cs" Line="1" Column="1" />
+      <File FileName="Orders.API/Data/OrderSeed.cs" Line="55" Column="40" />
+      <File FileName="Orders.API/Entities/PurchaseOrder.cs" Line="14" Column="36" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +12,9 @@
               <Node name="Orders" expanded="True">
                 <Node name="Orders.API" expanded="True">
                   <Node name="Controllers" expanded="True" />
-                  <Node name="Data" expanded="True" />
+                  <Node name="Data" expanded="True">
+                    <Node name="OrderSeed.cs" selected="True" />
+                  </Node>
                   <Node name="Entities" expanded="True" />
                   <Node name="Models" expanded="True" />
                   <Node name="Properties" expanded="True" />
@@ -22,20 +23,14 @@
                     <Node name="Implementations" expanded="True" />
                   </Node>
                   <Node name="Services" expanded="True">
-                    <Node name="Contracts" expanded="True">
-                      <Node name="IPurchaseOrderService.cs" selected="True" />
-                    </Node>
+                    <Node name="Contracts" expanded="True" />
                     <Node name="Implementations" expanded="True" />
                   </Node>
                 </Node>
               </Node>
               <Node name="Payments" expanded="True">
                 <Node name="Payments.API" expanded="True">
-                  <Node name="Controllers" expanded="True" />
-                  <Node name="Repositories" expanded="True" />
-                  <Node name="Services" expanded="True">
-                    <Node name="Implementations" expanded="True" />
-                  </Node>
+                  <Node name="Data" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -47,6 +42,7 @@
   <MonoDevelop.Ide.ItemProperties.Microservices.Payments.Payments.API PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Microservices.Orders.Orders.API PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.Microservices.Catalog.Catalog.API PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
