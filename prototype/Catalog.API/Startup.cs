@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Catalog.API.Data;
-using Catalog.API.Entities;
 using Catalog.API.Repositories.Contracts;
 using Catalog.API.Repositories.Implementations;
 using Catalog.API.Services.Contracts;
@@ -51,11 +50,11 @@ namespace Catalog.API
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<ICategoryService, CategoryService>();
 
-            // Controllers
-            services.AddControllers();
-
             // Swagger
             services.AddSwaggerGen();
+
+            // Controllers
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
