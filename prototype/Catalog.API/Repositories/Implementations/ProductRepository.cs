@@ -36,7 +36,6 @@ namespace Catalog.API.Repositories.Implementations
         {
             return await _catalogContext
                 .Products
-                .Include(prod => true)
                 .ToListAsync();
         }
 
@@ -44,7 +43,7 @@ namespace Catalog.API.Repositories.Implementations
         {
             return await _catalogContext
                 .Products
-                .Include(prod => prod.Category.CategoryId == categoryId)
+                //.Include(prod => prod.Category.CategoryId == categoryId)
                 .ToListAsync();
         }
 

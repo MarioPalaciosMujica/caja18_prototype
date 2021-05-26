@@ -28,7 +28,15 @@ namespace Catalog.API.Services.Implementations
 
         public async Task<bool> DeleteById(int id)
         {
-            return await _productRepository.DeleteById(id);
+            Product entity = await _productRepository.GetById(id);
+            if(entity != null)
+            {
+                return await _productRepository.DeleteById(id);
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public async Task<IEnumerable<ProductModel>> GetAll()
@@ -54,6 +62,7 @@ namespace Catalog.API.Services.Implementations
             Product entity = await _productRepository.GetById(model.ProductId);
             if(entity != null)
             {
+                entity = _mapper.Map<Product>(model);
                 entity.ModifiedDate = new DateTime();
                 return _mapper.Map<ProductModel>(await _productRepository.Modify(entity));
             }

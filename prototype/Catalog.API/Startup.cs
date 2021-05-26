@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Catalog.API.Data;
+using Catalog.API.Entities;
 using Catalog.API.Repositories.Contracts;
 using Catalog.API.Repositories.Implementations;
 using Catalog.API.Services.Contracts;
@@ -34,15 +35,8 @@ namespace Catalog.API
         {
             // Injeccion de dependecias para Database InMemory
             services.AddDbContext<CatalogContext>(options =>
-                options.UseInMemoryDatabase("CatalogDb")
+                options.UseInMemoryDatabase(databaseName: "CatalogDb")
             );
-
-            //services.AddEntityFrameworkInMemoryDatabase();
-            //services.AddDbContext<CatalogContext>(options =>
-            //{
-            //    options.UseInMemoryDatabase("CatalogDb");
-            //});
-
 
             // Mapper Config
             IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
@@ -59,6 +53,9 @@ namespace Catalog.API
 
             // Controllers
             services.AddControllers();
+
+            // Swagger
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,7 +64,16 @@ namespace Catalog.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
+                // Swagger
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Catalog v1"));
             }
+
+            // Poblar base de datos
+            IServiceScope scope = app.ApplicationServices.CreateScope();
+            CatalogContext context = scope.ServiceProvider.GetRequiredService<CatalogContext>();
+            CatalogSeed.PopulateDatabase(context);
 
             app.UseHttpsRedirection();
 
@@ -80,5 +86,7 @@ namespace Catalog.API
                 endpoints.MapControllers();
             });
         }
+
+
     }
 }

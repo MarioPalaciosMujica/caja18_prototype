@@ -6,12 +6,9 @@ namespace Catalog.API.Data
 {
     public class CatalogContext : DbContext
     {
-        public CatalogContext(DbContextOptions<CatalogContext> options) : base(options)
-        {
+        public CatalogContext(DbContextOptions<CatalogContext> options) : base(options){ }
 
-        }
-
-        public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }

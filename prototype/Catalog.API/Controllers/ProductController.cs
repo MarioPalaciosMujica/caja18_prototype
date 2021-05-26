@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Catalog.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/v1/[controller]")]
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
@@ -61,8 +61,8 @@ namespace Catalog.API.Controllers
 
         [HttpDelete]
         [Route("[action]/{id}", Name = "DeleteProduct")]
-        [ProducesResponseType(typeof(bool), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<bool>> DeleteProduct(int id)
+        [ProducesResponseType(typeof(ProductModel), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> DeleteProduct(int id)
         {
             return Ok(await _productService.DeleteById(id));
         }

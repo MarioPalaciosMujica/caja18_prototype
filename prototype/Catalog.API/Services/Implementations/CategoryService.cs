@@ -28,7 +28,16 @@ namespace Catalog.API.Services.Implementations
 
         public async Task<bool> DeleteById(int id)
         {
-            return await _categoryRepository.DeleteById(id);
+            Category entity = await _categoryRepository.GetById(id);
+            if(entity != null)
+            {
+                return await _categoryRepository.DeleteById(id);
+            }
+            else
+            {
+                return false;
+            }
+            
         }
 
         public async Task<IEnumerable<CategoryModel>> GetAll()
@@ -48,6 +57,7 @@ namespace Catalog.API.Services.Implementations
             Category entity = await _categoryRepository.GetById(model.CategoryId);
             if(entity != null)
             {
+                entity = _mapper.Map<Category>(model);
                 entity.ModifiedDate = new DateTime();
                 return _mapper.Map<CategoryModel>(await _categoryRepository.Modify(entity));
             }

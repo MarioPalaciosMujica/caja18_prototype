@@ -34,3 +34,8 @@
 /Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/obj/Debug/netcoreapp3.1/Catalog.API.dll
 /Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/obj/Debug/netcoreapp3.1/Catalog.API.pdb
 /Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/obj/Debug/netcoreapp3.1/Catalog.API.genruntimeconfig.cache
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/bin/Debug/netcoreapp3.1/Microsoft.OpenApi.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.Swagger.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/obj/Debug/netcoreapp3.1/Catalog.API.MvcApplicationPartsAssemblyInfo.cs
