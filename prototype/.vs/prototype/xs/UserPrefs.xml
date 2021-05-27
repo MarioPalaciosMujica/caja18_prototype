@@ -1,14 +1,21 @@
-﻿<Properties StartupConfiguration="RunAll">
+﻿<Properties StartupConfiguration="{B45403EC-2B9E-4D55-B2BB-7BFEA4961477}|Default">
   <MonoDevelop.Ide.ItemProperties.ApiGateway.WebGateway.WebGatewai.API PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebGatewai.API/ocelot.Local.json">
+  <MonoDevelop.Ide.ItemProperties.ApiGateway.Aggregations.Purchase.Aggregator FirstBuild="True" PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Purchase.Aggregator/appsettings.json">
     <Files>
       <File FileName="WebGatewai.API/ocelot.Local.json" Line="262" Column="77" />
+      <File FileName="Purchase.Aggregator/appsettings.json" Line="2" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Prototype" expanded="True" selected="True">
+          <Node name="Prototype" expanded="True">
             <Node name="ApiGateway" expanded="True">
+              <Node name="Aggregations" expanded="True">
+                <Node name="Purchase.Aggregator" expanded="True">
+                  <Node name="appsettings.json" selected="True" />
+                </Node>
+              </Node>
               <Node name="WebGateway" expanded="True" />
             </Node>
             <Node name="Microservices" expanded="True">
