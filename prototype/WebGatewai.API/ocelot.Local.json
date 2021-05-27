@@ -1,5 +1,6 @@
 ﻿{
   "Routes": [
+
     // ***************
     // * CATALOG API *
     // ***************
@@ -15,8 +16,7 @@
         }
       ],
       "UpstreamPathTemplate": "/Catalog/Category/GetCategoryById/{id}",
-      "UpstreamHttpMethod": [ "GET" ],
-      "FileCacheOptions": { "TtlSeconds": 30 }
+      "UpstreamHttpMethod": [ "GET" ]
     },
     // CategoryController.GetAllCategories
     {
@@ -29,8 +29,7 @@
         }
       ],
       "UpstreamPathTemplate": "/Catalog/Category/GetAllCategories",
-      "UpstreamHttpMethod": [ "GET" ],
-      "FileCacheOptions": { "TtlSeconds": 30 }
+      "UpstreamHttpMethod": [ "GET" ]
     },
     // CategoryController.CreateCategory
     {
@@ -43,8 +42,7 @@
         }
       ],
       "UpstreamPathTemplate": "/Catalog/Category/CreateCategory",
-      "UpstreamHttpMethod": [ "POST" ],
-      "FileCacheOptions": { "TtlSeconds": 30 }
+      "UpstreamHttpMethod": [ "POST" ]
     },
     // CategoryController.ModifyCategory
     {
@@ -57,8 +55,7 @@
         }
       ],
       "UpstreamPathTemplate": "/Catalog/Category/ModifyCategory",
-      "UpstreamHttpMethod": [ "PUT" ],
-      "FileCacheOptions": { "TtlSeconds": 30 }
+      "UpstreamHttpMethod": [ "PUT" ]
     },
     // CategoryController.DeleteCategory
     {
@@ -71,8 +68,7 @@
         }
       ],
       "UpstreamPathTemplate": "/Catalog/Category/DeleteCategory/{id}",
-      "UpstreamHttpMethod": [ "GET" ],
-      "FileCacheOptions": { "TtlSeconds": 30 }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
     // ProductController.GetProductById
     {
@@ -85,8 +81,7 @@
         }
       ],
       "UpstreamPathTemplate": "/Catalog/Product/GetProductById/{id}",
-      "UpstreamHttpMethod": [ "GET" ],
-      "FileCacheOptions": { "TtlSeconds": 30 }
+      "UpstreamHttpMethod": [ "GET" ]
     },
     // ProductController.GetAllProducts
     {
@@ -99,8 +94,7 @@
         }
       ],
       "UpstreamPathTemplate": "/Catalog/Product/GetAllProducts",
-      "UpstreamHttpMethod": [ "GET" ],
-      "FileCacheOptions": { "TtlSeconds": 30 }
+      "UpstreamHttpMethod": [ "GET" ]
     },
     // ProductController.CreateProduct
     {
@@ -113,8 +107,7 @@
         }
       ],
       "UpstreamPathTemplate": "/Catalog/Product/CreateProduct",
-      "UpstreamHttpMethod": [ "POST" ],
-      "FileCacheOptions": { "TtlSeconds": 30 }
+      "UpstreamHttpMethod": [ "POST" ]
     },
     // ProductController.ModifyProduct
     {
@@ -127,10 +120,9 @@
         }
       ],
       "UpstreamPathTemplate": "/Catalog/Product/ModifyProduct",
-      "UpstreamHttpMethod": [ "PUT" ],
-      "FileCacheOptions": { "TtlSeconds": 30 }
+      "UpstreamHttpMethod": [ "PUT" ]
     },
-    // ProductController.ModifyProduct
+    // ProductController.DeleteProduct
     {
       "DownstreamPathTemplate": "/api/v1/Product/DeleteProduct/{id}",
       "DownstreamScheme": "http",
@@ -141,8 +133,134 @@
         }
       ],
       "UpstreamPathTemplate": "/Catalog/Product/DeleteProduct/{id}",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "FileCacheOptions": { "TtlSeconds": 30 }
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+
+    // ****************
+    // * Payemnts API *
+    // ****************
+
+    // PaymentOrderController.GetPaymentOrderById
+    {
+      "DownstreamPathTemplate": "/api/v1/PaymentOrder/GetPaymentOrderById/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5002"
+        }
+      ],
+      "UpstreamPathTemplate": "/Payments/PaymentOrder/GetPaymentOrderById/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // PaymentOrderController.GetAllPaymentOrders
+    {
+      "DownstreamPathTemplate": "/api/v1/PaymentOrder/GetAllPaymentOrders",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5002"
+        }
+      ],
+      "UpstreamPathTemplate": "/Payments/PaymentOrder/GetAllPaymentOrders",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // PaymentOrderController.CreatePaymentOrder
+    {
+      "DownstreamPathTemplate": "/api/v1/PaymentOrder/CreatePaymentOrder",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5002"
+        }
+      ],
+      "UpstreamPathTemplate": "/Payments/PaymentOrder/CreatePaymentOrder",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    // PaymentOrderController.ModifyPaymentOrder
+    {
+      "DownstreamPathTemplate": "/api/v1/PaymentOrder/ModifyPaymentOrder",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5002"
+        }
+      ],
+      "UpstreamPathTemplate": "/Payments/PaymentOrder/ModifyPaymentOrder",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    // PaymentOrderController.DeletePaymentOrder
+    {
+      "DownstreamPathTemplate": "/api/v1/PaymentOrder/DeletePaymentOrder/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5002"
+        }
+      ],
+      "UpstreamPathTemplate": "/Payments/PaymentOrder/DeletePaymentOrder/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+
+    // **************
+    // * Orders API *
+    // **************
+
+    // PurchaseOrderController.GetPaymentOrderById
+    {
+      "DownstreamPathTemplate": "/api/v1/PurchaseOrder/GetPurchaseOrderById/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5003"
+        }
+      ],
+      "UpstreamPathTemplate": "/Orders/PurchaseOrder/GetPurchaseOrderById/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // PurchaseOrderController.GetAllPurchaseOrders
+    {
+      "DownstreamPathTemplate": "/api/v1/PurchaseOrder/GetAllPurchaseOrders",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5003"
+        }
+      ],
+      "UpstreamPathTemplate": "/Orders/PurchaseOrder/GetAllPurchaseOrders",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // PurchaseOrderController.CreatePurchaseOrder
+    {
+      "DownstreamPathTemplate": "/api/v1/PurchaseOrder/CreatePurchaseOrder",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5003"
+        }
+      ],
+      "UpstreamPathTemplate": "/Orders/PurchaseOrder/CreatePurchaseOrder",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    // PurchaseOrderController.CreatePurchaseOrder
+    {
+      "DownstreamPathTemplate": "/api/v1/PurchaseOrder/DeletePurchaseOrder/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5003"
+        }
+      ],
+      "UpstreamPathTemplate": "/Orders/PurchaseOrder/DeletePurchaseOrder/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
     }
   ],
   "GlobalConfiguration": {

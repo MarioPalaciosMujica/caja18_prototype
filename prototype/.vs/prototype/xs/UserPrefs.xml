@@ -1,29 +1,18 @@
-﻿<Properties StartupConfiguration="{AE5DAAC5-CCA4-4BF3-8DD6-7D4BA33FA845}|Default">
+﻿<Properties StartupConfiguration="RunAll">
   <MonoDevelop.Ide.ItemProperties.ApiGateway.WebGateway.WebGatewai.API PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebGatewai.API/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebGatewai.API/ocelot.Local.json">
     <Files>
-      <File FileName="WebGatewai.API/ocelot.Local.json" Line="143" Column="66" />
-      <File FileName="Catalog.API/Controllers/ProductController.cs" Line="55" Column="54" />
-      <File FileName="WebGatewai.API/Startup.cs" Line="38" Column="63" />
+      <File FileName="WebGatewai.API/ocelot.Local.json" Line="262" Column="77" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Prototype" expanded="True">
+          <Node name="Prototype" expanded="True" selected="True">
             <Node name="ApiGateway" expanded="True">
-              <Node name="WebGateway" expanded="True">
-                <Node name="WebGatewai.API" expanded="True">
-                  <Node name="ocelot.json" expanded="True" />
-                  <Node name="Startup.cs" selected="True" />
-                </Node>
-              </Node>
+              <Node name="WebGateway" expanded="True" />
             </Node>
             <Node name="Microservices" expanded="True">
-              <Node name="Catalog" expanded="True">
-                <Node name="Catalog.API" expanded="True">
-                  <Node name="Controllers" expanded="True" />
-                </Node>
-              </Node>
+              <Node name="Catalog" expanded="True" />
               <Node name="Orders" expanded="True" />
               <Node name="Payments" expanded="True" />
             </Node>
@@ -43,7 +32,7 @@
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="RunAll" Name="RunAll">
       <Items>
-        <StartupItem ItemId="{AE5DAAC5-CCA4-4BF3-8DD6-7D4BA33FA845}" ItemName="Catalog.API" ConfigurationId="Default" />
+        <StartupItem ItemId="{2CCD39B1-EC60-423A-A695-FC91680FC9F5}" ItemName="Payments.API" ConfigurationId="Default" />
         <StartupItem ItemId="{1BE9819B-08F6-4A3B-90E8-D45DC697BF15}" ItemName="WebGatewai.API" ConfigurationId="Default" />
       </Items>
     </MultiItemSolutionRunConfiguration>

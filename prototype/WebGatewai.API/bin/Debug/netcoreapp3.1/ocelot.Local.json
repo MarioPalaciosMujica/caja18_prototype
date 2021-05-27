@@ -1,5 +1,6 @@
 ﻿{
   "Routes": [
+
     // ***************
     // * CATALOG API *
     // ***************
@@ -67,7 +68,199 @@
         }
       ],
       "UpstreamPathTemplate": "/Catalog/Category/DeleteCategory/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    // ProductController.GetProductById
+    {
+      "DownstreamPathTemplate": "/api/v1/Product/GetProductById/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5001"
+        }
+      ],
+      "UpstreamPathTemplate": "/Catalog/Product/GetProductById/{id}",
       "UpstreamHttpMethod": [ "GET" ]
+    },
+    // ProductController.GetAllProducts
+    {
+      "DownstreamPathTemplate": "/api/v1/Product/GetAllProducts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5001"
+        }
+      ],
+      "UpstreamPathTemplate": "/Catalog/Product/GetAllProducts",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // ProductController.CreateProduct
+    {
+      "DownstreamPathTemplate": "/api/v1/Product/CreateProduct",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5001"
+        }
+      ],
+      "UpstreamPathTemplate": "/Catalog/Product/CreateProduct",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    // ProductController.ModifyProduct
+    {
+      "DownstreamPathTemplate": "/api/v1/Product/ModifyProduct",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5001"
+        }
+      ],
+      "UpstreamPathTemplate": "/Catalog/Product/ModifyProduct",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    // ProductController.DeleteProduct
+    {
+      "DownstreamPathTemplate": "/api/v1/Product/DeleteProduct/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5001"
+        }
+      ],
+      "UpstreamPathTemplate": "/Catalog/Product/DeleteProduct/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+
+    // ****************
+    // * Payemnts API *
+    // ****************
+
+    // PaymentOrderController.GetPaymentOrderById
+    {
+      "DownstreamPathTemplate": "/api/v1/PaymentOrder/GetPaymentOrderById/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5002"
+        }
+      ],
+      "UpstreamPathTemplate": "/Payments/PaymentOrder/GetPaymentOrderById/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // PaymentOrderController.GetAllPaymentOrders
+    {
+      "DownstreamPathTemplate": "/api/v1/PaymentOrder/GetAllPaymentOrders",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5002"
+        }
+      ],
+      "UpstreamPathTemplate": "/Payments/PaymentOrder/GetAllPaymentOrders",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // PaymentOrderController.CreatePaymentOrder
+    {
+      "DownstreamPathTemplate": "/api/v1/PaymentOrder/CreatePaymentOrder",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5002"
+        }
+      ],
+      "UpstreamPathTemplate": "/Payments/PaymentOrder/CreatePaymentOrder",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    // PaymentOrderController.ModifyPaymentOrder
+    {
+      "DownstreamPathTemplate": "/api/v1/PaymentOrder/ModifyPaymentOrder",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5002"
+        }
+      ],
+      "UpstreamPathTemplate": "/Payments/PaymentOrder/ModifyPaymentOrder",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    // PaymentOrderController.DeletePaymentOrder
+    {
+      "DownstreamPathTemplate": "/api/v1/PaymentOrder/DeletePaymentOrder/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5002"
+        }
+      ],
+      "UpstreamPathTemplate": "/Payments/PaymentOrder/DeletePaymentOrder/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+
+    // **************
+    // * Orders API *
+    // **************
+
+    // PurchaseOrderController.GetPaymentOrderById
+    {
+      "DownstreamPathTemplate": "/api/v1/PurchaseOrder/GetPurchaseOrderById/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5003"
+        }
+      ],
+      "UpstreamPathTemplate": "/Orders/PurchaseOrder/GetPurchaseOrderById/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // PurchaseOrderController.GetAllPurchaseOrders
+    {
+      "DownstreamPathTemplate": "/api/v1/PurchaseOrder/GetAllPurchaseOrders",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5003"
+        }
+      ],
+      "UpstreamPathTemplate": "/Orders/PurchaseOrder/GetAllPurchaseOrders",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // PurchaseOrderController.CreatePurchaseOrder
+    {
+      "DownstreamPathTemplate": "/api/v1/PurchaseOrder/CreatePurchaseOrder",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5003"
+        }
+      ],
+      "UpstreamPathTemplate": "/Orders/PurchaseOrder/CreatePurchaseOrder",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    // PurchaseOrderController.CreatePurchaseOrder
+    {
+      "DownstreamPathTemplate": "/api/v1/PurchaseOrder/DeletePurchaseOrder/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5003"
+        }
+      ],
+      "UpstreamPathTemplate": "/Orders/PurchaseOrder/DeletePurchaseOrder/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
     }
   ],
   "GlobalConfiguration": {
