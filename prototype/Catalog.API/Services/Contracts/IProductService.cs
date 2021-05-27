@@ -11,8 +11,6 @@ namespace Catalog.API.Services.Contracts
 
         Task<IEnumerable<ProductModel>> GetAll();
 
-        Task<IEnumerable<ProductModel>> GetByCategoryId(int categoryId);
-
         Task<ProductModel> Create(ProductModel model);
 
         Task<ProductModel> Modify(ProductModel model);

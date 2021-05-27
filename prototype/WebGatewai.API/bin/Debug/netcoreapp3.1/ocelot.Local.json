@@ -1,0 +1,76 @@
+﻿{
+  "Routes": [
+    // ***************
+    // * CATALOG API *
+    // ***************
+
+    // CategoryController.GetAllCategories
+    {
+      "DownstreamPathTemplate": "/api/v1/Category/GetCategoryById/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5001"
+        }
+      ],
+      "UpstreamPathTemplate": "/Catalog/Category/GetCategoryById/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // CategoryController.GetAllCategories
+    {
+      "DownstreamPathTemplate": "/api/v1/Category/GetAllCategories",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5001"
+        }
+      ],
+      "UpstreamPathTemplate": "/Catalog/Category/GetAllCategories",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // CategoryController.CreateCategory
+    {
+      "DownstreamPathTemplate": "/api/v1/Category/CreateCategory",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5001"
+        }
+      ],
+      "UpstreamPathTemplate": "/Catalog/Category/CreateCategory",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    // CategoryController.ModifyCategory
+    {
+      "DownstreamPathTemplate": "/api/v1/Category/ModifyCategory",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5001"
+        }
+      ],
+      "UpstreamPathTemplate": "/Catalog/Category/ModifyCategory",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    // CategoryController.DeleteCategory
+    {
+      "DownstreamPathTemplate": "/api/v1/Category/DeleteCategory/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5001"
+        }
+      ],
+      "UpstreamPathTemplate": "/Catalog/Category/DeleteCategory/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5100"
+  }
+}

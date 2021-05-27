@@ -12,7 +12,6 @@ namespace Payments.API.Data
                 PaymentOrderId = 1,
                 BankName = "Santander",
                 PaymentMethod = "WebPay Plus",
-                Amount = 50000,
                 IsValid = true,
                 CreatedDate = new DateTime(),
                 ModifiedDate = new DateTime()
@@ -24,7 +23,6 @@ namespace Payments.API.Data
                 PaymentOrderId = 2,
                 BankName = "Banco Estado",
                 PaymentMethod = "PayPal",
-                Amount = 100000,
                 IsValid = true,
                 CreatedDate = new DateTime(),
                 ModifiedDate = new DateTime()
@@ -36,7 +34,6 @@ namespace Payments.API.Data
                 PaymentOrderId = 3,
                 BankName = "Scotiabank",
                 PaymentMethod = "Flow",
-                Amount = 85000,
                 IsValid = true,
                 CreatedDate = new DateTime(),
                 ModifiedDate = new DateTime()

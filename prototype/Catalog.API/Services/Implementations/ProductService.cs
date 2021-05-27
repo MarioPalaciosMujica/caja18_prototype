@@ -45,12 +45,6 @@ namespace Catalog.API.Services.Implementations
             return _mapper.Map<IEnumerable<ProductModel>>(entities);
         }
 
-        public async Task<IEnumerable<ProductModel>> GetByCategoryId(int categoryId)
-        {
-            IEnumerable<Product> entities = await _productRepository.GetByCategoryId(categoryId);
-            return _mapper.Map<IEnumerable<ProductModel>>(entities);
-        }
-
         public async Task<ProductModel> GetById(int id)
         {
             Product entity = await _productRepository.GetById(id);

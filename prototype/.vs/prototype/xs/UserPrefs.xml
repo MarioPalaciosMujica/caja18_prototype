@@ -1,38 +1,31 @@
-﻿<Properties StartupConfiguration="{E8546626-E8F5-4128-BF1A-78C110452E85}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Orders.API/Data/OrderSeed.cs">
+﻿<Properties StartupConfiguration="{AE5DAAC5-CCA4-4BF3-8DD6-7D4BA33FA845}|Default">
+  <MonoDevelop.Ide.ItemProperties.ApiGateway.WebGateway.WebGatewai.API PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebGatewai.API/Startup.cs">
     <Files>
-      <File FileName="Orders.API/Data/OrderSeed.cs" Line="55" Column="40" />
-      <File FileName="Orders.API/Entities/PurchaseOrder.cs" Line="14" Column="36" />
+      <File FileName="WebGatewai.API/ocelot.Local.json" Line="143" Column="66" />
+      <File FileName="Catalog.API/Controllers/ProductController.cs" Line="55" Column="54" />
+      <File FileName="WebGatewai.API/Startup.cs" Line="38" Column="63" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Prototype" expanded="True">
+            <Node name="ApiGateway" expanded="True">
+              <Node name="WebGateway" expanded="True">
+                <Node name="WebGatewai.API" expanded="True">
+                  <Node name="ocelot.json" expanded="True" />
+                  <Node name="Startup.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
             <Node name="Microservices" expanded="True">
-              <Node name="Orders" expanded="True">
-                <Node name="Orders.API" expanded="True">
+              <Node name="Catalog" expanded="True">
+                <Node name="Catalog.API" expanded="True">
                   <Node name="Controllers" expanded="True" />
-                  <Node name="Data" expanded="True">
-                    <Node name="OrderSeed.cs" selected="True" />
-                  </Node>
-                  <Node name="Entities" expanded="True" />
-                  <Node name="Models" expanded="True" />
-                  <Node name="Properties" expanded="True" />
-                  <Node name="Repositories" expanded="True">
-                    <Node name="Contracts" expanded="True" />
-                    <Node name="Implementations" expanded="True" />
-                  </Node>
-                  <Node name="Services" expanded="True">
-                    <Node name="Contracts" expanded="True" />
-                    <Node name="Implementations" expanded="True" />
-                  </Node>
                 </Node>
               </Node>
-              <Node name="Payments" expanded="True">
-                <Node name="Payments.API" expanded="True">
-                  <Node name="Data" expanded="True" />
-                </Node>
-              </Node>
+              <Node name="Orders" expanded="True" />
+              <Node name="Payments" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -47,5 +40,12 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="RunAll" Name="RunAll">
+      <Items>
+        <StartupItem ItemId="{AE5DAAC5-CCA4-4BF3-8DD6-7D4BA33FA845}" ItemName="Catalog.API" ConfigurationId="Default" />
+        <StartupItem ItemId="{1BE9819B-08F6-4A3B-90E8-D45DC697BF15}" ItemName="WebGatewai.API" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
 </Properties>

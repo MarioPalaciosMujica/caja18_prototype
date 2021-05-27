@@ -23,6 +23,8 @@ namespace Orders.API.Services.Implementations
         public async Task<PurchaseOrderModel> Create(PurchaseOrderModel model)
         {
             PurchaseOrder entity = await _purchaseOrderRepository.Create(_mapper.Map<PurchaseOrder>(model));
+            entity.TaxesAmount = calculateTaxes(entity.PriceAmount);
+            entity.TotalAmount = entity.PriceAmount + entity.TaxesAmount;
             return _mapper.Map<PurchaseOrderModel>(entity);
         }
 
@@ -49,6 +51,12 @@ namespace Orders.API.Services.Implementations
         {
             PurchaseOrder entity = await _purchaseOrderRepository.GetById(id);
             return _mapper.Map<PurchaseOrderModel>(entity);
+        }
+
+        private decimal calculateTaxes(decimal priceAmount, decimal percentage = 19)
+        {
+            decimal tax = (decimal)((double)priceAmount * 0.19);
+            return Math.Round(tax, MidpointRounding.AwayFromZero);
         }
     }
 }

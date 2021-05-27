@@ -28,14 +28,6 @@ namespace Catalog.API.Controllers
         }
 
         [HttpGet]
-        [Route("[action]/{categoryId}", Name = "GetproductByCategoryId")]
-        [ProducesResponseType(typeof(IEnumerable<ProductModel>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<ProductModel>>> GetproductByCategoryId(int categoryId)
-        {
-            return Ok(await _productService.GetByCategoryId(categoryId));
-        }
-
-        [HttpGet]
         [Route("GetAllProducts")]
         [ProducesResponseType(typeof(IEnumerable<ProductModel>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<ProductModel>>> GetAllProducts()

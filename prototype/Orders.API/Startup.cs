@@ -64,7 +64,7 @@ namespace Orders.API
 
                 // Swagger
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Payment v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Orders v1"));
             }
 
             // Poblar base de datos

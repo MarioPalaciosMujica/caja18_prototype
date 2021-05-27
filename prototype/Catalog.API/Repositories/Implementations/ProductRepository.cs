@@ -39,20 +39,11 @@ namespace Catalog.API.Repositories.Implementations
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<Product>> GetByCategoryId(int categoryId)
-        {
-            return await _catalogContext
-                .Products
-                //.Include(prod => prod.Category.CategoryId == categoryId)
-                .ToListAsync();
-        }
-
         public async Task<Product> GetById(int id)
         {
             return await _catalogContext
                 .Products
-                .Include(prod => prod.ProductId == id)
-                .FirstOrDefaultAsync();
+                .FindAsync(id);
         }
 
         public async Task<Product> Modify(Product entity)
