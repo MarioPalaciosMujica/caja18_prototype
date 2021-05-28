@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebGatewai.API", "WebGatewa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Purchase.Aggregator", "Purchase.Aggregator\Purchase.Aggregator.csproj", "{B45403EC-2B9E-4D55-B2BB-7BFEA4961477}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{053F6D2F-8DD7-4D5C-B6F0-5161DACB949E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{B45403EC-2B9E-4D55-B2BB-7BFEA4961477}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B45403EC-2B9E-4D55-B2BB-7BFEA4961477}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B45403EC-2B9E-4D55-B2BB-7BFEA4961477}.Release|Any CPU.Build.0 = Release|Any CPU
+		{053F6D2F-8DD7-4D5C-B6F0-5161DACB949E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{053F6D2F-8DD7-4D5C-B6F0-5161DACB949E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{053F6D2F-8DD7-4D5C-B6F0-5161DACB949E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{053F6D2F-8DD7-4D5C-B6F0-5161DACB949E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,5 +79,6 @@ Global
 		{3C5E2AD7-EB8C-4050-B606-384C84ECD622} = {596FBD90-2E3E-437E-A6B3-3CD7CA7ABCF3}
 		{1BE9819B-08F6-4A3B-90E8-D45DC697BF15} = {4333C51F-8521-47DC-BF5F-A75E7F59BF5C}
 		{B45403EC-2B9E-4D55-B2BB-7BFEA4961477} = {3C5E2AD7-EB8C-4050-B606-384C84ECD622}
+		{053F6D2F-8DD7-4D5C-B6F0-5161DACB949E} = {B7902E02-3776-45EF-8F05-1022DBD2085D}
 	EndGlobalSection
 EndGlobal

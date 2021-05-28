@@ -1,7 +1,11 @@
-﻿<Properties StartupConfiguration="RunAll">
+﻿<Properties StartupConfiguration="{053F6D2F-8DD7-4D5C-B6F0-5161DACB949E}|Default">
   <MonoDevelop.Ide.ItemProperties.ApiGateway.WebGateway.WebGatewai.API PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.ApiGateway.Aggregations.Purchase.Aggregator PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="IdentityServer/Config.cs">
+    <Files>
+      <File FileName="IdentityServer/Startup.cs" Line="19" Column="38" />
+      <File FileName="IdentityServer/Config.cs" Line="6" Column="9" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -15,17 +19,20 @@
               <Node name="Orders" expanded="True" />
               <Node name="Payments" expanded="True" />
             </Node>
+            <Node name="Security" expanded="True">
+              <Node name="IdentityServer" expanded="True">
+                <Node name="Config.cs" selected="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Microservices.Payments.Payments.API PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Security.IdentityServer PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.Microservices.Orders.Orders.API PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.Microservices.Catalog.Catalog.API PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
