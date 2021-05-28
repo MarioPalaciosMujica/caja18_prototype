@@ -261,8 +261,27 @@
       ],
       "UpstreamPathTemplate": "/Orders/PurchaseOrder/DeletePurchaseOrder/{id}",
       "UpstreamHttpMethod": [ "DELETE" ]
+    },
+
+    // ************************
+    // * Purchase.Aggregation *
+    // ************************
+
+    // PurchaseOrderController.CreatePurchaseOrder
+    {
+      "DownstreamPathTemplate": "/api/v1/Purchase/ProcessPayment",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5101"
+        }
+      ],
+      "UpstreamPathTemplate": "/PurchaseAggregation/Purchase/ProcessPayment",
+      "UpstreamHttpMethod": [ "POST" ]
     }
   ],
+
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost:5100"
   }

@@ -13,8 +13,8 @@ namespace Payments.API.Data
                 BankName = "Santander",
                 PaymentMethod = "WebPay Plus",
                 IsValid = true,
-                CreatedDate = new DateTime(),
-                ModifiedDate = new DateTime()
+                CreatedDate = DateTime.Now,
+                ModifiedDate = DateTime.Now
             };
             paymentContext.Add(pay1);
 
@@ -24,8 +24,8 @@ namespace Payments.API.Data
                 BankName = "Banco Estado",
                 PaymentMethod = "PayPal",
                 IsValid = true,
-                CreatedDate = new DateTime(),
-                ModifiedDate = new DateTime()
+                CreatedDate = DateTime.Now,
+                ModifiedDate = DateTime.Now
             };
             paymentContext.Add(pay2);
 
@@ -35,8 +35,8 @@ namespace Payments.API.Data
                 BankName = "Scotiabank",
                 PaymentMethod = "Flow",
                 IsValid = true,
-                CreatedDate = new DateTime(),
-                ModifiedDate = new DateTime()
+                CreatedDate = DateTime.Now,
+                ModifiedDate = DateTime.Now
             };
             paymentContext.Add(pay3);
 

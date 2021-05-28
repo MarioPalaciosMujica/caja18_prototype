@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "cHV2IUlo59YqyrNK2+TNWObdXZMBhAow1cQD9mhT8BjLtPxIyaIZfyXAxUoYngCM4PRJJc2MAGj4GEzum5kAkQ==",
+  "dgSpecHash": "7P/4YKpItjrZGTTwJvSQfa/UZQ78BLdz7Fl3Fl3SqOTOO4vE5pCdqxoBqZn3V8vUoffveMenXkHUVoRqGqFEHA==",
   "success": true,
   "projectFilePath": "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Purchase.Aggregator/Purchase.Aggregator.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/mario/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/mario/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/mario/.nuget/packages/swashbuckle.aspnetcore/6.1.4/swashbuckle.aspnetcore.6.1.4.nupkg.sha512",
+    "/Users/mario/.nuget/packages/swashbuckle.aspnetcore.swagger/6.1.4/swashbuckle.aspnetcore.swagger.6.1.4.nupkg.sha512",
+    "/Users/mario/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.1.4/swashbuckle.aspnetcore.swaggergen.6.1.4.nupkg.sha512",
+    "/Users/mario/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.1.4/swashbuckle.aspnetcore.swaggerui.6.1.4.nupkg.sha512"
+  ],
   "logs": []
 }

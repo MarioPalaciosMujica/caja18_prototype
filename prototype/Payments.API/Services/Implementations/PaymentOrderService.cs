@@ -22,7 +22,10 @@ namespace Payments.API.Services.Implementations
 
         public async Task<PaymentOrderModel> Create(PaymentOrderModel model)
         {
-            PaymentOrder entity = await _paymentOrderRepository.Create(_mapper.Map<PaymentOrder>(model));
+            PaymentOrder entity = _mapper.Map<PaymentOrder>(model);
+            entity.CreatedDate = DateTime.Now;
+            entity.ModifiedDate = DateTime.Now;
+            entity = await _paymentOrderRepository.Create(entity);
             return _mapper.Map<PaymentOrderModel>(entity);
         }
 
@@ -53,12 +56,13 @@ namespace Payments.API.Services.Implementations
 
         public async Task<PaymentOrderModel> Modify(PaymentOrderModel model)
         {
-            PaymentOrder entity = await _paymentOrderRepository.GetById(model.PaymentOrderId);
-            if(entity != null)
+            PaymentOrder oldEntity = await _paymentOrderRepository.GetById(model.PaymentOrderId);
+            if(oldEntity != null)
             {
-                entity = _mapper.Map<PaymentOrder>(model);
-                entity.ModifiedDate = new DateTime();
-                return _mapper.Map<PaymentOrderModel>(await _paymentOrderRepository.Modify(entity));
+                PaymentOrder newEntity = _mapper.Map<PaymentOrder>(model);
+                newEntity.CreatedDate = oldEntity.CreatedDate;
+                newEntity.ModifiedDate = DateTime.Now;
+                return _mapper.Map<PaymentOrderModel>(await _paymentOrderRepository.Modify(newEntity));
             }
             else
             {

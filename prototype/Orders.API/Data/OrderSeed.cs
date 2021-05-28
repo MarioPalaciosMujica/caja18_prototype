@@ -17,8 +17,8 @@ namespace Orders.API.Data
                 TaxesAmount = 12000,
                 TotalAmount = 67000,
                 PaymentMethod = "WebPay",
-                CreatedDate = new DateTime(),
-                ModifyDate = new DateTime()
+                CreatedDate = DateTime.Now,
+                ModifyDate = DateTime.Now
             };
             orderContext.PurchaseOrders.Add(order1);
 
@@ -32,8 +32,8 @@ namespace Orders.API.Data
                 TaxesAmount = 22000,
                 TotalAmount = 77000,
                 PaymentMethod = "OnePay",
-                CreatedDate = new DateTime(),
-                ModifyDate = new DateTime()
+                CreatedDate = DateTime.Now,
+                ModifyDate = DateTime.Now
             };
             orderContext.PurchaseOrders.Add(order2);
 
@@ -47,8 +47,8 @@ namespace Orders.API.Data
                 TaxesAmount = 72000,
                 TotalAmount = 87000,
                 PaymentMethod = "PayPal",
-                CreatedDate = new DateTime(),
-                ModifyDate = new DateTime()
+                CreatedDate = DateTime.Now,
+                ModifyDate = DateTime.Now
             };
             orderContext.PurchaseOrders.Add(order3);
 

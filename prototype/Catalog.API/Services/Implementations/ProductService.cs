@@ -22,7 +22,10 @@ namespace Catalog.API.Services.Implementations
 
         public async Task<ProductModel> Create(ProductModel model)
         {
-            Product entity = await _productRepository.Create(_mapper.Map<Product>(model));
+            Product entity = _mapper.Map<Product>(model);
+            entity.CreatedDate = DateTime.Now;
+            entity.ModifiedDate = DateTime.Now;
+            entity = await _productRepository.Create(entity);
             return _mapper.Map<ProductModel>(entity);
         }
 
@@ -53,12 +56,12 @@ namespace Catalog.API.Services.Implementations
 
         public async Task<ProductModel> Modify(ProductModel model)
         {
-            Product entity = await _productRepository.GetById(model.ProductId);
-            if(entity != null)
+            Product oldEntity = await _productRepository.GetById(model.ProductId);
+            if(oldEntity != null)
             {
-                entity = _mapper.Map<Product>(model);
-                entity.ModifiedDate = new DateTime();
-                return _mapper.Map<ProductModel>(await _productRepository.Modify(entity));
+                Product newEntity = _mapper.Map<Product>(model);
+                newEntity.ModifiedDate = new DateTime();
+                return _mapper.Map<ProductModel>(await _productRepository.Modify(newEntity));
             }
             else
             {

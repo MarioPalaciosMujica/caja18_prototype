@@ -11,8 +11,8 @@ namespace Catalog.API.Data
             {
                 CategoryId = 1,
                 Name = "Guitarras Electricas",
-                CreatedDate = new DateTime(),
-                ModifiedDate = new DateTime()
+                CreatedDate = DateTime.Now,
+                ModifiedDate = DateTime.Now
             };
             catalogContext.Categories.Add(cat1);
 
@@ -21,8 +21,8 @@ namespace Catalog.API.Data
             {
                 CategoryId = 2,
                 Name = "Guitarras Acusticas",
-                CreatedDate = new DateTime(),
-                ModifiedDate = new DateTime()
+                CreatedDate = DateTime.Now,
+                ModifiedDate = DateTime.Now
             };
             catalogContext.Categories.Add(cat2);
 
@@ -35,8 +35,8 @@ namespace Catalog.API.Data
                 Stock = 10,
                 PriceAmount = 120000000,
                 Category = cat1,
-                CreatedDate = new DateTime(),
-                ModifiedDate = new DateTime()
+                CreatedDate = DateTime.Now,
+                ModifiedDate = DateTime.Now
             };
             catalogContext.Products.Add(prod1);
 
@@ -49,8 +49,8 @@ namespace Catalog.API.Data
                 Stock = 8,
                 PriceAmount = 160000000,
                 Category = cat1,
-                CreatedDate = new DateTime(),
-                ModifiedDate = new DateTime()
+                CreatedDate = DateTime.Now,
+                ModifiedDate = DateTime.Now
             };
             catalogContext.Products.Add(prod2);
 
@@ -63,8 +63,8 @@ namespace Catalog.API.Data
                 Stock = 15,
                 PriceAmount = 130000000,
                 Category = cat1,
-                CreatedDate = new DateTime(),
-                ModifiedDate = new DateTime()
+                CreatedDate = DateTime.Now,
+                ModifiedDate = DateTime.Now
             };
             catalogContext.Products.Add(prod3);
 
@@ -77,8 +77,8 @@ namespace Catalog.API.Data
                 Stock = 20,
                 PriceAmount = 600000,
                 Category = cat2,
-                CreatedDate = new DateTime(),
-                ModifiedDate = new DateTime()
+                CreatedDate = DateTime.Now,
+                ModifiedDate = DateTime.Now
             };
             catalogContext.Products.Add(prod4);
 
@@ -91,8 +91,8 @@ namespace Catalog.API.Data
                 Stock = 25,
                 PriceAmount = 800000,
                 Category = cat2,
-                CreatedDate = new DateTime(),
-                ModifiedDate = new DateTime()
+                CreatedDate = DateTime.Now,
+                ModifiedDate = DateTime.Now
             };
             catalogContext.Products.Add(prod5);
 
@@ -105,8 +105,8 @@ namespace Catalog.API.Data
                 Stock = 5,
                 PriceAmount = 750000,
                 Category = cat2,
-                CreatedDate = new DateTime(),
-                ModifiedDate = new DateTime()
+                CreatedDate = DateTime.Now,
+                ModifiedDate = DateTime.Now
             };
             catalogContext.Products.Add(prod6);
 

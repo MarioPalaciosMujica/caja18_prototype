@@ -22,7 +22,10 @@ namespace Catalog.API.Services.Implementations
 
         public async Task<CategoryModel> Create(CategoryModel model)
         {
-            Category entity = await _categoryRepository.Create(_mapper.Map<Category>(model));
+            Category entity = _mapper.Map<Category>(model);
+            entity.CreatedDate = DateTime.Now;
+            entity.ModifiedDate = DateTime.Now;
+            entity = await _categoryRepository.Create(entity);
             return _mapper.Map<CategoryModel>(entity);
         }
 
@@ -37,7 +40,6 @@ namespace Catalog.API.Services.Implementations
             {
                 return false;
             }
-            
         }
 
         public async Task<IEnumerable<CategoryModel>> GetAll()
@@ -54,12 +56,12 @@ namespace Catalog.API.Services.Implementations
 
         public async Task<CategoryModel> Modify(CategoryModel model)
         {
-            Category entity = await _categoryRepository.GetById(model.CategoryId);
-            if(entity != null)
+            Category oldEntity = await _categoryRepository.GetById(model.CategoryId);
+            if(oldEntity != null)
             {
-                entity = _mapper.Map<Category>(model);
-                entity.ModifiedDate = new DateTime();
-                return _mapper.Map<CategoryModel>(await _categoryRepository.Modify(entity));
+                Category newEntity = _mapper.Map<Category>(model);
+                newEntity.ModifiedDate = new DateTime();
+                return _mapper.Map<CategoryModel>(await _categoryRepository.Modify(newEntity));
             }
             else
             {
