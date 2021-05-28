@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mia+Wd27+I2tH0k4trMdRgthLfIND1YX88jfKHjdvZd+I7j6W0FVLbfXal95J4lvf1eRFZNxjQmMt5H+Dr6T9A==",
+  "dgSpecHash": "9ngIItbikTTT2pZi9WUZHNUHsNc8V+gZN3N0wbCz4FKah/YOoTyiSp2GYWF0RfDY4NCcc+MZoy5rR6jpGkPHUQ==",
   "success": true,
-  "projectFilePath": "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/WebGatewai.API/WebGatewai.API.csproj",
+  "projectFilePath": "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/WebGatewai.API/WebGateway.API.csproj",
   "expectedPackageFiles": [
     "/Users/mario/.nuget/packages/fluentvalidation/8.6.2/fluentvalidation.8.6.2.nupkg.sha512",
     "/Users/mario/.nuget/packages/microsoft.aspnetcore.jsonpatch/3.1.3/microsoft.aspnetcore.jsonpatch.3.1.3.nupkg.sha512",

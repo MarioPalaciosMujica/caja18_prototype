@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Payments.API.Models;
 using Payments.API.Services.Contracts;
 
 namespace Payments.API.Controllers
 {
+    //[Authorize]
     [ApiController]
     [Route("api/v1/[controller]")]
     public class PaymentOrderController : ControllerBase

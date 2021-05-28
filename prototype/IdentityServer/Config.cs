@@ -6,11 +6,11 @@ namespace IdentityServer
 {
     public class Config
     {
-        public static IEnumerable<ApiResource> GetAllApiResources()
+        public static IEnumerable<ApiResource> GetApiResources()
         {
             return new List<ApiResource>
             {
-                new ApiResource("API.name", "API.description")
+                new ApiResource("ApiGateway", "API Gateway para prototype")
             };
         }
 
@@ -23,12 +23,9 @@ namespace IdentityServer
                     ClientId = "client",
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     ClientSecrets = { new Secret("secret".Sha256()) },
-                    AllowedScopes = { "API.name" }
+                    AllowedScopes = { "ApiGateway" }
                 }
             };
         }
-
     }
-
-
 }

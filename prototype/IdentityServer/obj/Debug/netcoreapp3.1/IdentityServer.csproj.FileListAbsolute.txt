@@ -19,9 +19,7 @@
 /Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/IdentityServer/obj/Debug/netcoreapp3.1/IdentityServer.genruntimeconfig.cache
 /Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/IdentityServer/bin/Debug/netcoreapp3.1/IdentityModel.dll
 /Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/IdentityServer/bin/Debug/netcoreapp3.1/IdentityServer4.dll
-/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/IdentityServer/bin/Debug/netcoreapp3.1/IdentityServer4.Storage.dll
 /Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/IdentityServer/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
-/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/IdentityServer/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
 /Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/IdentityServer/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
 /Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/IdentityServer/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
 /Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/IdentityServer/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

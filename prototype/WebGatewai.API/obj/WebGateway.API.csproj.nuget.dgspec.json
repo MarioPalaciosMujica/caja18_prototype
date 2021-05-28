@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/IdentityServer/IdentityServer.csproj": {}
+    "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/WebGatewai.API/WebGateway.API.csproj": {}
   },
   "projects": {
-    "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/IdentityServer/IdentityServer.csproj": {
+    "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/WebGatewai.API/WebGateway.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/IdentityServer/IdentityServer.csproj",
-        "projectName": "IdentityServer",
-        "projectPath": "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/IdentityServer/IdentityServer.csproj",
+        "projectUniqueName": "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/WebGatewai.API/WebGateway.API.csproj",
+        "projectName": "WebGateway.API",
+        "projectPath": "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/WebGatewai.API/WebGateway.API.csproj",
         "packagesPath": "/Users/mario/.nuget/packages/",
-        "outputPath": "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/IdentityServer/obj/",
+        "outputPath": "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/WebGatewai.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mario/.config/NuGet/NuGet.Config"
@@ -38,9 +38,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "IdentityServer4": {
+            "Ocelot": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[16.0.1, )"
             }
           },
           "imports": [

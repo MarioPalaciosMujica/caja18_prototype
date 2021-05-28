@@ -39,3 +39,13 @@
 /Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Payments.API/obj/Debug/netcoreapp3.1/Payments.API.dll
 /Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Payments.API/obj/Debug/netcoreapp3.1/Payments.API.pdb
 /Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Payments.API/obj/Debug/netcoreapp3.1/Payments.API.genruntimeconfig.cache
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Payments.API/bin/Debug/netcoreapp3.1/IdentityModel.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Payments.API/bin/Debug/netcoreapp3.1/IdentityModel.AspNetCore.OAuth2Introspection.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Payments.API/bin/Debug/netcoreapp3.1/IdentityServer4.AccessTokenValidation.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Payments.API/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Payments.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Payments.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Payments.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Payments.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Payments.API/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Payments.API/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll

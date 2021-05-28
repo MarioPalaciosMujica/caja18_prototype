@@ -25,7 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebGateway", "WebGateway", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aggregations", "Aggregations", "{3C5E2AD7-EB8C-4050-B606-384C84ECD622}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebGatewai.API", "WebGatewai.API\WebGatewai.API.csproj", "{1BE9819B-08F6-4A3B-90E8-D45DC697BF15}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebGateway.API", "WebGatewai.API\WebGateway.API.csproj", "{1BE9819B-08F6-4A3B-90E8-D45DC697BF15}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Purchase.Aggregator", "Purchase.Aggregator\Purchase.Aggregator.csproj", "{B45403EC-2B9E-4D55-B2BB-7BFEA4961477}"
 EndProject

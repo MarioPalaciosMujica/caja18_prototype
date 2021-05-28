@@ -495,9 +495,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/WebGatewai.API/WebGatewai.API.csproj",
-      "projectName": "WebGatewai.API",
-      "projectPath": "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/WebGatewai.API/WebGatewai.API.csproj",
+      "projectUniqueName": "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/WebGatewai.API/WebGateway.API.csproj",
+      "projectName": "WebGateway.API",
+      "projectPath": "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/WebGatewai.API/WebGateway.API.csproj",
       "packagesPath": "/Users/mario/.nuget/packages/",
       "outputPath": "/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/WebGatewai.API/obj/",
       "projectStyle": "PackageReference",

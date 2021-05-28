@@ -12,6 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Payments.API.Data;
 using Payments.API.Repositories.Contracts;
 using Payments.API.Repositories.Implementations;
@@ -48,8 +50,70 @@ namespace Payments.API
             // Injeccion de dependencias para Servicios
             services.AddScoped<IPaymentOrderService, PaymentOrderService>();
 
+            // Autentificacion
+            //services.AddAuthentication("Bearer")
+            //    .AddJwtBearer("Bearer", options =>
+            //    {
+            //        options.Authority = "http://localhost:5200";
+            //        options.RequireHttpsMetadata = false;
+            //        options.TokenValidationParameters = new TokenValidationParameters
+            //        {
+            //            ValidateAudience = false
+            //        };
+            //    });
+            //// Autorizacion
+            //services.AddAuthorization(options =>
+            //{
+            //    options.AddPolicy("ApiScope", policy =>
+            //    {
+            //        policy.RequireAuthenticatedUser();
+            //        policy.RequireClaim("scope", "ApiGateway");
+            //    });
+            //});
+
+            services.AddAuthentication("Bearer")
+                .AddIdentityServerAuthentication(options =>
+                {
+                    options.Authority = "http://localhost:5200";
+                    options.RequireHttpsMetadata = false;
+                    options.ApiName = "ApiGateway";
+                });
+
             // Swagger
             services.AddSwaggerGen();
+
+            //services.AddSwaggerGen(c =>
+            //{
+            //    c.SwaggerDoc("V1", new OpenApiInfo { Title = "Prototype.Services.PaymentApi", Version = "v1" });
+            //    //c.EnableAnnotations();
+            //    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+            //    {
+            //        Description = @"Ingrese 'Bearer' [space] y su Token",
+            //        Name = "Authorization",
+            //        In = ParameterLocation.Header,
+            //        Type = SecuritySchemeType.ApiKey,
+            //        Scheme = "Bearer"
+            //    });
+            //    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+            //    {
+            //        {
+            //            new OpenApiSecurityScheme
+            //            {
+            //                Reference = new OpenApiReference
+            //                {
+            //                    Type = ReferenceType.SecurityScheme,
+            //                    Id = "Bearer"
+            //                },
+            //                Scheme = "oauth2",
+            //                Name = "Bearer",
+            //                In = ParameterLocation.Header
+            //            },
+            //            new List<string>()
+            //        }
+            //    });
+            //});
+
+
 
             // Controllers
             services.AddControllers();
