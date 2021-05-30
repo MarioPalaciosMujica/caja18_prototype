@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Payments.API.Models;
+using Payments.API.Entities;
 
 namespace Payments.API.Services.Contracts
 {
     public interface IPaymentOrderService
     {
-        Task<PaymentOrderModel> GetById(int id);
+        Task<PaymentOrder> GetById(int id);
 
-        Task<IEnumerable<PaymentOrderModel>> GetAll();
+        Task<IEnumerable<PaymentOrder>> GetAll();
 
-        Task<PaymentOrderModel> Create(PaymentOrderModel model);
+        Task<PaymentOrder> Create(PaymentOrder entity);
 
-        Task<PaymentOrderModel> Modify(PaymentOrderModel model);
+        Task<PaymentOrder> Modify(PaymentOrder entity);
 
         Task<bool> DeleteById(int id);
     }

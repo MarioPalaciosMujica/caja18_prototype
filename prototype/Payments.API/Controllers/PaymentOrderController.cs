@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Payments.API.Entities;
 using Payments.API.Models;
 using Payments.API.Services.Contracts;
 
@@ -15,10 +17,12 @@ namespace Payments.API.Controllers
     public class PaymentOrderController : ControllerBase
     {
         private readonly IPaymentOrderService _paymentOrderService;
+        private readonly IMapper _mapper;
 
-        public PaymentOrderController(IPaymentOrderService paymentOrderService)
+        public PaymentOrderController(IPaymentOrderService paymentOrderService, IMapper mapper)
         {
             _paymentOrderService = paymentOrderService ?? throw new ArgumentNullException(nameof(paymentOrderService));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
         [HttpGet]
@@ -26,7 +30,8 @@ namespace Payments.API.Controllers
         [ProducesResponseType(typeof(PaymentOrderModel), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<PaymentOrderModel>> GetPaymentOrderById(int id)
         {
-            return Ok(await _paymentOrderService.GetById(id));
+            PaymentOrder entity = await _paymentOrderService.GetById(id);
+            return Ok(_mapper.Map<PaymentOrderModel>(entity));
         }
 
         [HttpGet]
@@ -34,7 +39,8 @@ namespace Payments.API.Controllers
         [ProducesResponseType(typeof(IEnumerable<PaymentOrderModel>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<PaymentOrderModel>>> GetAllPaymentOrders()
         {
-            return Ok(await _paymentOrderService.GetAll());
+            IEnumerable<PaymentOrder> entities = await _paymentOrderService.GetAll();
+            return Ok(_mapper.Map<IEnumerable<PaymentOrderModel>>(entities));
         }
 
         [HttpPost]
@@ -42,7 +48,9 @@ namespace Payments.API.Controllers
         [ProducesResponseType(typeof(PaymentOrderModel), (int)HttpStatusCode.Created)]
         public async Task<ActionResult<PaymentOrderModel>> CreatePaymentOrder([FromBody] PaymentOrderModel model)
         {
-            return Ok(await _paymentOrderService.Create(model));
+            PaymentOrder entity = _mapper.Map<PaymentOrder>(model);
+            entity = await _paymentOrderService.Create(entity);
+            return Ok(_mapper.Map<PaymentOrderModel>(entity));
         }
 
         [HttpPut]
@@ -50,7 +58,9 @@ namespace Payments.API.Controllers
         [ProducesResponseType(typeof(PaymentOrderModel), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<PaymentOrderModel>> ModifyPaymentOrder([FromBody] PaymentOrderModel model)
         {
-            return Ok(await _paymentOrderService.Modify(model));
+            PaymentOrder entity = _mapper.Map<PaymentOrder>(model);
+            entity = await _paymentOrderService.Modify(entity);
+            return Ok(_mapper.Map<PaymentOrderModel>(entity));
         }
 
         [HttpDelete]

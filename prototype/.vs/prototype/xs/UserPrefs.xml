@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="RunAll">
   <MonoDevelop.Ide.ItemProperties.ApiGateway.Aggregations.Purchase.Aggregator PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Catalog.API/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Payments.API/Services/Contracts/IPaymentOrderService.cs">
     <Files>
-      <File FileName="Catalog.API/Startup.cs" Line="48" Column="75" />
+      <File FileName="Payments.API/Services/Contracts/IPaymentOrderService.cs" Line="20" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,12 +16,18 @@
               <Node name="Catalog" expanded="True" />
               <Node name="Orders" expanded="True" />
               <Node name="Payments" expanded="True">
-                <Node name="Payments.API" expanded="True" />
+                <Node name="Payments.API" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                  <Node name="Services" expanded="True">
+                    <Node name="Contracts" expanded="True">
+                      <Node name="IPaymentOrderService.cs" selected="True" />
+                    </Node>
+                    <Node name="Implementations" expanded="True" />
+                  </Node>
+                </Node>
               </Node>
             </Node>
-            <Node name="Security" expanded="True">
-              <Node name="IdentityServer" expanded="True" />
-            </Node>
+            <Node name="Security" expanded="True" />
           </Node>
         </State>
       </Pad>
