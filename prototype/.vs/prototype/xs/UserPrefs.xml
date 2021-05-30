@@ -1,26 +1,22 @@
 ﻿<Properties StartupConfiguration="RunAll">
   <MonoDevelop.Ide.ItemProperties.ApiGateway.Aggregations.Purchase.Aggregator PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Payments.API/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Catalog.API/Startup.cs">
     <Files>
-      <File FileName="Payments.API/Startup.cs" Line="76" Column="18" />
-      <File FileName="IdentityServer/Config.cs" Line="13" Column="76" />
-      <File FileName="IdentityServer/Startup.cs" Line="1" Column="1" />
-      <File FileName="Payments.API/Controllers/PaymentOrderController.cs" Line="12" Column="7" />
+      <File FileName="Catalog.API/Startup.cs" Line="48" Column="75" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Prototype" expanded="True">
+            <Node name="ApiGateway" expanded="True">
+              <Node name="Aggregations" expanded="True" />
+              <Node name="WebGateway" expanded="True" />
+            </Node>
             <Node name="Microservices" expanded="True">
+              <Node name="Catalog" expanded="True" />
               <Node name="Orders" expanded="True" />
               <Node name="Payments" expanded="True">
-                <Node name="Payments.API" expanded="True">
-                  <Node name="Dependencies" expanded="True">
-                    <Node name="PackageDependencies" expanded="True" />
-                  </Node>
-                  <Node name="Controllers" expanded="True" />
-                  <Node name="Startup.cs" selected="True" />
-                </Node>
+                <Node name="Payments.API" expanded="True" />
               </Node>
             </Node>
             <Node name="Security" expanded="True">
@@ -44,8 +40,11 @@
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="RunAll" Name="RunAll">
       <Items>
+        <StartupItem ItemId="{AE5DAAC5-CCA4-4BF3-8DD6-7D4BA33FA845}" ItemName="Catalog.API" ConfigurationId="Default" />
         <StartupItem ItemId="{053F6D2F-8DD7-4D5C-B6F0-5161DACB949E}" ItemName="IdentityServer" ConfigurationId="Default" />
+        <StartupItem ItemId="{E8546626-E8F5-4128-BF1A-78C110452E85}" ItemName="Orders.API" ConfigurationId="Default" />
         <StartupItem ItemId="{2CCD39B1-EC60-423A-A695-FC91680FC9F5}" ItemName="Payments.API" ConfigurationId="Default" />
+        <StartupItem ItemId="{1BE9819B-08F6-4A3B-90E8-D45DC697BF15}" ItemName="WebGateway.API" ConfigurationId="WebGatewai.API" />
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>

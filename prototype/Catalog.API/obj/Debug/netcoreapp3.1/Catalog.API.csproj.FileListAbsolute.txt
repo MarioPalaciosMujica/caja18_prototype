@@ -39,3 +39,11 @@
 /Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/obj/Debug/netcoreapp3.1/Catalog.API.MvcApplicationPartsAssemblyInfo.cs
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/mario/Documents/proyects/caja_18/caja18_prototype/prototype/Catalog.API/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll

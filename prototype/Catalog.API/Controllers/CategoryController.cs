@@ -4,10 +4,12 @@ using System.Net;
 using System.Threading.Tasks;
 using Catalog.API.Models;
 using Catalog.API.Services.Contracts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Catalog.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/v1/[controller]")]
     public class CategoryController : ControllerBase

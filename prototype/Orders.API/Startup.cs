@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using Orders.API.Data;
 using Orders.API.Repositories.Contracts;
 using Orders.API.Repositories.Implementations;
@@ -48,6 +49,18 @@ namespace Orders.API
             // Injeccion de dependencias para Servicios
             services.AddScoped<IPurchaseOrderService, PurchaseOrderService>();
 
+            // Autentificacion
+            services.AddAuthentication("Bearer")
+               .AddJwtBearer("Bearer", options =>
+               {
+                   options.Authority = "http://localhost:5200";
+                   options.RequireHttpsMetadata = false;
+                   options.TokenValidationParameters = new TokenValidationParameters
+                   {
+                       ValidateAudience = false
+                   };
+               });
+
             // Swagger
             services.AddSwaggerGen();
 
@@ -76,6 +89,8 @@ namespace Orders.API
 
             app.UseRouting();
 
+            // Authentication y Authorization Middleware
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

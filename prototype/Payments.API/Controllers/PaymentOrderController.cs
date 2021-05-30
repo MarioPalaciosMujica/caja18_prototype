@@ -9,7 +9,7 @@ using Payments.API.Services.Contracts;
 
 namespace Payments.API.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [ApiController]
     [Route("api/v1/[controller]")]
     public class PaymentOrderController : ControllerBase
