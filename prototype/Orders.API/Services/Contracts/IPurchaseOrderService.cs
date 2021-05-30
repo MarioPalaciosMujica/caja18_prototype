@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Orders.API.Models;
+using Orders.API.Entities;
 
 namespace Orders.API.Services.Contracts
 {
     public interface IPurchaseOrderService
     {
-        Task<PurchaseOrderModel> GetById(int id);
+        Task<PurchaseOrder> GetById(int id);
 
-        Task<IEnumerable<PurchaseOrderModel>> GetAll();
+        Task<IEnumerable<PurchaseOrder>> GetAll();
 
-        Task<PurchaseOrderModel> Create(PurchaseOrderModel model);
+        Task<PurchaseOrder> Create(PurchaseOrder model);
 
         Task<bool> DeleteById(int id);
     }

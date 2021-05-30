@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Orders.API.Entities;
 using Orders.API.Models;
 using Orders.API.Services.Contracts;
 
@@ -15,10 +17,12 @@ namespace Orders.API.Controllers
     public class PurchaseOrderController : ControllerBase
     {
         private readonly IPurchaseOrderService _purchaseOrderService;
+        private readonly IMapper _mapper;
 
-        public PurchaseOrderController(IPurchaseOrderService purchaseOrderService)
+        public PurchaseOrderController(IPurchaseOrderService purchaseOrderService, IMapper mapper)
         {
             _purchaseOrderService = purchaseOrderService ?? throw new ArgumentNullException(nameof(purchaseOrderService));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
         [HttpGet]
@@ -26,15 +30,17 @@ namespace Orders.API.Controllers
         [ProducesResponseType(typeof(PurchaseOrderModel), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<PurchaseOrderModel>> GetPurchaseOrderById(int id)
         {
-            return Ok(await _purchaseOrderService.GetById(id));
+            PurchaseOrder entity = await _purchaseOrderService.GetById(id);
+            return Ok(_mapper.Map<PurchaseOrderModel>(entity));
         }
 
         [HttpGet]
         [Route("GetAllPurchaseOrders")]
-        [ProducesResponseType(typeof(PurchaseOrderModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(IEnumerable<PurchaseOrderModel>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerator<PurchaseOrderModel>>> GetAllPurchaseOrders()
         {
-            return Ok(await _purchaseOrderService.GetAll());
+            IEnumerable<PurchaseOrder> entities = await _purchaseOrderService.GetAll();
+            return Ok(_mapper.Map<IEnumerable<PurchaseOrderModel>>(entities));
         }
 
         [HttpPost]
@@ -42,7 +48,8 @@ namespace Orders.API.Controllers
         [ProducesResponseType(typeof(PurchaseOrderModel), (int)HttpStatusCode.Created)]
         public async Task<ActionResult<PurchaseOrderModel>> CreatePurchaseOrder([FromBody] PurchaseOrderModel model)
         {
-            return Ok(await _purchaseOrderService.Create(model));
+            PurchaseOrder entity = await _purchaseOrderService.Create(_mapper.Map<PurchaseOrder>(model));
+            return Ok(_mapper.Map<PurchaseOrderModel>(entity));
         }
 
         [HttpDelete]

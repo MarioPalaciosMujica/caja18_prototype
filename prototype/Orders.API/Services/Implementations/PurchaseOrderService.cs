@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using AutoMapper;
 using Orders.API.Entities;
-using Orders.API.Models;
 using Orders.API.Repositories.Contracts;
 using Orders.API.Services.Contracts;
 
@@ -12,23 +10,19 @@ namespace Orders.API.Services.Implementations
     public class PurchaseOrderService : IPurchaseOrderService
     {
         private readonly IPurchaseOrderRepository _purchaseOrderRepository;
-        private readonly IMapper _mapper;
 
-        public PurchaseOrderService(IPurchaseOrderRepository purchaseOrderRepository, IMapper mapper)
+        public PurchaseOrderService(IPurchaseOrderRepository purchaseOrderRepository)
         {
             _purchaseOrderRepository = purchaseOrderRepository ?? throw new ArgumentNullException(nameof(purchaseOrderRepository));
-            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
-        public async Task<PurchaseOrderModel> Create(PurchaseOrderModel model)
+        public async Task<PurchaseOrder> Create(PurchaseOrder entity)
         {
-            PurchaseOrder entity = _mapper.Map<PurchaseOrder>(model);
             entity.TaxesAmount = calculateTaxes(entity.PriceAmount);
             entity.TotalAmount = entity.PriceAmount + entity.TaxesAmount;
             entity.CreatedDate = DateTime.Now;
             entity.ModifyDate = DateTime.Now;
-            entity = await _purchaseOrderRepository.Create(entity);
-            return _mapper.Map<PurchaseOrderModel>(entity);
+            return await _purchaseOrderRepository.Create(entity);
         }
 
         public async Task<bool> DeleteById(int id)
@@ -44,16 +38,14 @@ namespace Orders.API.Services.Implementations
             }
         }
 
-        public async Task<IEnumerable<PurchaseOrderModel>> GetAll()
+        public async Task<IEnumerable<PurchaseOrder>> GetAll()
         {
-            IEnumerable<PurchaseOrder> entities = await _purchaseOrderRepository.GetAll();
-            return _mapper.Map<IEnumerable<PurchaseOrderModel>>(entities);
+            return await _purchaseOrderRepository.GetAll();
         }
 
-        public async Task<PurchaseOrderModel> GetById(int id)
+        public async Task<PurchaseOrder> GetById(int id)
         {
-            PurchaseOrder entity = await _purchaseOrderRepository.GetById(id);
-            return _mapper.Map<PurchaseOrderModel>(entity);
+            return await _purchaseOrderRepository.GetById(id);
         }
 
         private decimal calculateTaxes(decimal priceAmount, double percentage = 0.19)

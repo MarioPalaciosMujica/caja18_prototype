@@ -1,9 +1,6 @@
 ﻿<Properties StartupConfiguration="RunAll">
   <MonoDevelop.Ide.ItemProperties.ApiGateway.Aggregations.Purchase.Aggregator PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Payments.API/Services/Contracts/IPaymentOrderService.cs">
-    <Files>
-      <File FileName="Payments.API/Services/Contracts/IPaymentOrderService.cs" Line="20" Column="2" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -19,10 +16,7 @@
                 <Node name="Payments.API" expanded="True">
                   <Node name="Controllers" expanded="True" />
                   <Node name="Services" expanded="True">
-                    <Node name="Contracts" expanded="True">
-                      <Node name="IPaymentOrderService.cs" selected="True" />
-                    </Node>
-                    <Node name="Implementations" expanded="True" />
+                    <Node name="Contracts" expanded="True" />
                   </Node>
                 </Node>
               </Node>

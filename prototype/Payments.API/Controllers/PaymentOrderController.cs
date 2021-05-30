@@ -48,8 +48,7 @@ namespace Payments.API.Controllers
         [ProducesResponseType(typeof(PaymentOrderModel), (int)HttpStatusCode.Created)]
         public async Task<ActionResult<PaymentOrderModel>> CreatePaymentOrder([FromBody] PaymentOrderModel model)
         {
-            PaymentOrder entity = _mapper.Map<PaymentOrder>(model);
-            entity = await _paymentOrderService.Create(entity);
+            PaymentOrder entity = await _paymentOrderService.Create(_mapper.Map<PaymentOrder>(model));
             return Ok(_mapper.Map<PaymentOrderModel>(entity));
         }
 
@@ -58,8 +57,7 @@ namespace Payments.API.Controllers
         [ProducesResponseType(typeof(PaymentOrderModel), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<PaymentOrderModel>> ModifyPaymentOrder([FromBody] PaymentOrderModel model)
         {
-            PaymentOrder entity = _mapper.Map<PaymentOrder>(model);
-            entity = await _paymentOrderService.Modify(entity);
+            PaymentOrder entity = await _paymentOrderService.Modify(_mapper.Map<PaymentOrder>(model));
             return Ok(_mapper.Map<PaymentOrderModel>(entity));
         }
 
