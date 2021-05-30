@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Catalog.API.Entities;
 using Catalog.API.Models;
 
 namespace Catalog.API.Services.Contracts
 {
     public interface IProductService
     {
-        Task<ProductModel> GetById(int id);
+        Task<Product> GetById(int id);
 
-        Task<IEnumerable<ProductModel>> GetAll();
+        Task<IEnumerable<Product>> GetAll();
 
-        Task<ProductModel> Create(ProductModel model);
+        Task<Product> Create(Product entity);
 
-        Task<ProductModel> Modify(ProductModel model);
+        Task<Product> Modify(Product entity);
 
         Task<bool> DeleteById(int id);
     }

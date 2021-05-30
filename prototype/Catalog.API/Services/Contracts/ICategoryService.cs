@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Catalog.API.Entities;
 using Catalog.API.Models;
 
 namespace Catalog.API.Services.Contracts
 {
     public interface ICategoryService
     {
-        Task<CategoryModel> GetById(int id);
+        Task<Category> GetById(int id);
 
-        Task<IEnumerable<CategoryModel>> GetAll();
+        Task<IEnumerable<Category>> GetAll();
 
-        Task<CategoryModel> Create(CategoryModel model);
+        Task<Category> Create(Category entity);
 
-        Task<CategoryModel> Modify(CategoryModel model);
+        Task<Category> Modify(Category entity);
 
         Task<bool> DeleteById(int id);
     }

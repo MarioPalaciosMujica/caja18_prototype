@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using AutoMapper;
 using Catalog.API.Entities;
 using Catalog.API.Models;
 using Catalog.API.Repositories.Contracts;
@@ -12,21 +11,17 @@ namespace Catalog.API.Services.Implementations
     public class CategoryService : ICategoryService
     {
         private readonly ICategoryRepository _categoryRepository;
-        private readonly IMapper _mapper;
 
-        public CategoryService(ICategoryRepository categoryRepository, IMapper mapper)
+        public CategoryService(ICategoryRepository categoryRepository)
         {
             _categoryRepository = categoryRepository ?? throw new ArgumentNullException(nameof(categoryRepository));
-            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
-        public async Task<CategoryModel> Create(CategoryModel model)
+        public async Task<Category> Create(Category entity)
         {
-            Category entity = _mapper.Map<Category>(model);
             entity.CreatedDate = DateTime.Now;
             entity.ModifiedDate = DateTime.Now;
-            entity = await _categoryRepository.Create(entity);
-            return _mapper.Map<CategoryModel>(entity);
+            return await _categoryRepository.Create(entity);
         }
 
         public async Task<bool> DeleteById(int id)
@@ -42,26 +37,24 @@ namespace Catalog.API.Services.Implementations
             }
         }
 
-        public async Task<IEnumerable<CategoryModel>> GetAll()
+        public async Task<IEnumerable<Category>> GetAll()
         {
-            IEnumerable<Category> entities = await _categoryRepository.GetAll();
-            return _mapper.Map<IEnumerable<CategoryModel>>(entities);
+            return await _categoryRepository.GetAll();
         }
 
-        public async Task<CategoryModel> GetById(int id)
+        public async Task<Category> GetById(int id)
         {
-            Category entity = await _categoryRepository.GetById(id);
-            return _mapper.Map<CategoryModel>(entity);
+            return await _categoryRepository.GetById(id);
         }
 
-        public async Task<CategoryModel> Modify(CategoryModel model)
+        public async Task<Category> Modify(Category entity)
         {
-            Category oldEntity = await _categoryRepository.GetById(model.CategoryId);
+            Category oldEntity = await _categoryRepository.GetById(entity.CategoryId);
             if(oldEntity != null)
             {
-                Category newEntity = _mapper.Map<Category>(model);
-                newEntity.ModifiedDate = new DateTime();
-                return _mapper.Map<CategoryModel>(await _categoryRepository.Modify(newEntity));
+                entity.CreatedDate = oldEntity.CreatedDate;
+                entity.ModifiedDate = new DateTime();
+                return await _categoryRepository.Modify(entity);
             }
             else
             {

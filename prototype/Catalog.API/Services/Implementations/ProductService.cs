@@ -20,13 +20,11 @@ namespace Catalog.API.Services.Implementations
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
-        public async Task<ProductModel> Create(ProductModel model)
+        public async Task<Product> Create(Product entity)
         {
-            Product entity = _mapper.Map<Product>(model);
             entity.CreatedDate = DateTime.Now;
             entity.ModifiedDate = DateTime.Now;
-            entity = await _productRepository.Create(entity);
-            return _mapper.Map<ProductModel>(entity);
+            return await _productRepository.Create(entity);
         }
 
         public async Task<bool> DeleteById(int id)
@@ -42,26 +40,24 @@ namespace Catalog.API.Services.Implementations
             }
         }
 
-        public async Task<IEnumerable<ProductModel>> GetAll()
+        public async Task<IEnumerable<Product>> GetAll()
         {
-            IEnumerable<Product> entities = await _productRepository.GetAll();
-            return _mapper.Map<IEnumerable<ProductModel>>(entities);
+            return await _productRepository.GetAll();
         }
 
-        public async Task<ProductModel> GetById(int id)
+        public async Task<Product> GetById(int id)
         {
-            Product entity = await _productRepository.GetById(id);
-            return _mapper.Map<ProductModel>(entity);
+            return await _productRepository.GetById(id);
         }
 
-        public async Task<ProductModel> Modify(ProductModel model)
+        public async Task<Product> Modify(Product entity)
         {
-            Product oldEntity = await _productRepository.GetById(model.ProductId);
+            Product oldEntity = await _productRepository.GetById(entity.ProductId);
             if(oldEntity != null)
             {
-                Product newEntity = _mapper.Map<Product>(model);
-                newEntity.ModifiedDate = new DateTime();
-                return _mapper.Map<ProductModel>(await _productRepository.Modify(newEntity));
+                entity.CreatedDate = oldEntity.CreatedDate;
+                entity.ModifiedDate = new DateTime();
+                return await _productRepository.Modify(entity);
             }
             else
             {

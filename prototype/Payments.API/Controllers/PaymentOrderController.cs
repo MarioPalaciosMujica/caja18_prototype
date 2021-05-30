@@ -63,7 +63,7 @@ namespace Payments.API.Controllers
 
         [HttpDelete]
         [Route("[action]/{id}", Name = "DeletePaymentOrder")]
-        [ProducesResponseType(typeof(PaymentOrderModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(bool), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> DeletePaymentOrder(int id)
         {
             return Ok(await _paymentOrderService.DeleteById(id));

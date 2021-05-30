@@ -54,7 +54,7 @@ namespace Orders.API.Controllers
 
         [HttpDelete]
         [Route("[action]/{id}", Name = "DeletePurchaseOrder")]
-        [ProducesResponseType(typeof(PurchaseOrderModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(bool), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> DeletePurchaseOrder(int id)
         {
             return Ok(await _purchaseOrderService.DeleteById(id));
