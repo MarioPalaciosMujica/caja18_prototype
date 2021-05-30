@@ -18,10 +18,10 @@ namespace Purchase.Aggregator.Services.Implementations
             _orderService = orderService ?? throw new ArgumentNullException(nameof(orderService));
         }
 
-        public async Task<PurchaseOrderModel> ProcessPayment(PaymentInputModel model)
+        public async Task<PurchaseOrderModel> ProcessPayment(PaymentInputModel model, string bearerToken)
         {
-            ProductModel product = await _catalogService.GetProductById(model.ProductId);
-            PaymentModel payment = await _paymentService.GetPaymentById(model.PaymentOrderId);
+            ProductModel product = await _catalogService.GetProductById(model.ProductId, bearerToken);
+            PaymentModel payment = await _paymentService.GetPaymentById(model.PaymentOrderId, bearerToken);
 
             PurchaseOrderModel purchaseOrder = new PurchaseOrderModel
             {
@@ -37,7 +37,7 @@ namespace Purchase.Aggregator.Services.Implementations
                 ModifyDate = new DateTime()
             };
 
-            return await _orderService.CreatePurchaseOrder(purchaseOrder);
+            return await _orderService.CreatePurchaseOrder(purchaseOrder, bearerToken);
         }
 
 

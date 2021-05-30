@@ -6,6 +6,6 @@ namespace Purchase.Aggregator.Services.Contracts
 {
     public interface IPaymentService
     {
-        Task<PaymentModel> GetPaymentById(int id);
+        Task<PaymentModel> GetPaymentById(int id, string bearerToken);
     }
 }

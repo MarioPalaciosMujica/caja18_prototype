@@ -17,11 +17,12 @@ namespace Purchase.Aggregator.Services.Implementations
             _client = client ?? throw new ArgumentNullException(nameof(client));
         }
 
-        public async Task<PurchaseOrderModel> CreatePurchaseOrder(PurchaseOrderModel model)
+        public async Task<PurchaseOrderModel> CreatePurchaseOrder(PurchaseOrderModel model, string bearerToken)
         {
             string data = JsonSerializer.Serialize<PurchaseOrderModel>(model);
             HttpContent content = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
 
+            _client.DefaultRequestHeaders.Add("Authorization", bearerToken);
             HttpResponseMessage response = await _client.PostAsync("/api/v1/PurchaseOrder/CreatePurchaseOrder", content);
             return await response.ReadContentAs<PurchaseOrderModel>();
         }

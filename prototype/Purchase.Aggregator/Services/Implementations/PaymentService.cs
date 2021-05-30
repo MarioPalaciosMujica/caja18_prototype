@@ -16,8 +16,9 @@ namespace Purchase.Aggregator.Services.Implementations
             _client = client ?? throw new ArgumentNullException(nameof(client));
         }
 
-        public async Task<PaymentModel> GetPaymentById(int id)
+        public async Task<PaymentModel> GetPaymentById(int id, string bearerToken)
         {
+            _client.DefaultRequestHeaders.Add("Authorization", bearerToken);
             HttpResponseMessage response = await _client.GetAsync($"/api/v1/PaymentOrder/GetPaymentOrderById/{id}");
             return await response.ReadContentAs<PaymentModel>();
         }

@@ -6,6 +6,6 @@ namespace Purchase.Aggregator.Services.Contracts
 {
     public interface IOrderService
     {
-        Task<PurchaseOrderModel> CreatePurchaseOrder(PurchaseOrderModel model);
+        Task<PurchaseOrderModel> CreatePurchaseOrder(PurchaseOrderModel model, string bearerToken);
     }
 }

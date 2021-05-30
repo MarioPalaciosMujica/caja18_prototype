@@ -6,6 +6,6 @@ namespace Purchase.Aggregator.Services.Contracts
 {
     public interface IPaymentInputService
     {
-        Task<PurchaseOrderModel> ProcessPayment(PaymentInputModel model);
+        Task<PurchaseOrderModel> ProcessPayment(PaymentInputModel model, string BearerToken);
     }
 }

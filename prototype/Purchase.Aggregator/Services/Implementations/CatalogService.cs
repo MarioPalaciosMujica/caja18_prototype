@@ -16,8 +16,9 @@ namespace Purchase.Aggregator.Services.Implementations
             _client = client ?? throw new ArgumentNullException(nameof(client));
         }
 
-        public async Task<ProductModel> GetProductById(int id)
+        public async Task<ProductModel> GetProductById(int id, string bearerToken)
         {
+            _client.DefaultRequestHeaders.Add("Authorization", bearerToken);
             HttpResponseMessage response = await _client.GetAsync($"/api/v1/Product/GetProductById/{id}");
             return await response.ReadContentAs<ProductModel>();
         }

@@ -6,6 +6,6 @@ namespace Purchase.Aggregator.Services.Contracts
 {
     public interface ICatalogService
     {
-        Task<ProductModel> GetProductById(int id);
+        Task<ProductModel> GetProductById(int id, string bearerToken);
     }
 }
