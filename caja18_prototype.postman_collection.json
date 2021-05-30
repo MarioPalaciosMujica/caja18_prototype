@@ -1,0 +1,723 @@
+{
+	"info": {
+		"_postman_id": "4cae0870-7b65-4af6-8453-9a5a6ad37be6",
+		"name": "caja18_prototype",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Catalog.API / GetAllCategories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5100/Catalog/Category/GetAllCategories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Catalog",
+						"Category",
+						"GetAllCategories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Catalog.API / GetCategoryById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5100/Catalog/Category/GetCategoryById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Catalog",
+						"Category",
+						"GetCategoryById",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Catalog.API / CreateCategory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"categoryId\": 0,\n  \"name\": \"nueva\",\n  \"createdDate\": \"2021-05-26T04:52:12.077Z\",\n  \"modifiedDate\": \"2021-05-26T04:52:12.077Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5100/Catalog/Category/CreateCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Catalog",
+						"Category",
+						"CreateCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Catalog.API / ModifyCategory",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"categoryId\": 3,\n    \"name\": \"nueva\",\n    \"createdDate\": \"2021-05-26T04:52:12.077Z\",\n    \"modifiedDate\": \"2021-05-26T04:52:12.077Z\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5100/Catalog/Category/ModifyCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Catalog",
+						"Category",
+						"ModifyCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Catalog.API / DeleteCategory",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5100/Catalog/Category/DeleteCategory/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Catalog",
+						"Category",
+						"DeleteCategory",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Catalog.API / GetAllProducts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5100/Catalog/Product/GetAllProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Catalog",
+						"Product",
+						"GetAllProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Catalog.API / GetProductById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5100/Catalog/Product/GetProductById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Catalog",
+						"Product",
+						"GetProductById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Catalog.API / CreateProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"productId\": 0,\n  \"name\": \"New Product\",\n  \"description\": \"nuevo registro\",\n  \"imageUrl\": \"image/test\",\n  \"stock\": 5,\n  \"priceAmount\": 5000,\n  \"category\": {\n    \"categoryId\": 3,\n    \"name\": \"New Category\",\n    \"createdDate\": \"2021-05-27T15:24:16.045Z\",\n    \"modifiedDate\": \"2021-05-27T15:24:16.045Z\"\n  },\n  \"createdDate\": \"2021-05-27T15:24:16.045Z\",\n  \"modifiedDate\": \"2021-05-27T15:24:16.045Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5100/Catalog/Product/CreateProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Catalog",
+						"Product",
+						"CreateProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Catalog.API / ModifyProduct",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\": 7,\n    \"name\": \"New Product Updated\",\n    \"description\": \"nuevo registro\",\n    \"imageUrl\": \"image/test\",\n    \"stock\": 5,\n    \"priceAmount\": 6000,\n    \"category\": null,\n    \"createdDate\": \"2021-05-27T15:24:16.045Z\",\n    \"modifiedDate\": \"2021-05-27T15:24:16.045Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5100/Catalog/Product/ModifyProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Catalog",
+						"Product",
+						"ModifyProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Catalog.API / DeleteProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5100/Catalog/Product/DeleteProduct/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Catalog",
+						"Product",
+						"DeleteProduct",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payments.API / GetAllPaymentOrders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5100/Payments/PaymentOrder/GetAllPaymentOrders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Payments",
+						"PaymentOrder",
+						"GetAllPaymentOrders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payments.API / GetPaymentOrderById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5100/Payments/PaymentOrder/GetPaymentOrderById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Payments",
+						"PaymentOrder",
+						"GetPaymentOrderById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payments.API / CreatePaymentOrder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"paymentOrderId\": 0,\n  \"bankName\": \"Banco de Chile\",\n  \"paymentMethod\": \"Transbank\",\n  \"isValid\": true,\n  \"createdDate\": \"2021-05-26T16:21:58.232Z\",\n  \"modifiedDate\": \"2021-05-26T16:21:58.232Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5100/Payments/PaymentOrder/CreatePaymentOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Payments",
+						"PaymentOrder",
+						"CreatePaymentOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payments.API / ModifyPaymentOrder",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"paymentOrderId\": 4,\n    \"bankName\": \"Banco de Chile\",\n    \"paymentMethod\": \"Webpay\",\n    \"isValid\": false,\n    \"createdDate\": \"2021-05-26T16:21:58.232Z\",\n    \"modifiedDate\": \"2021-05-26T16:21:58.232Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5100/Payments/PaymentOrder/ModifyPaymentOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Payments",
+						"PaymentOrder",
+						"ModifyPaymentOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payments.API / DeletePaymentOrder",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5100/Payments/PaymentOrder/DeletePaymentOrder/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Payments",
+						"PaymentOrder",
+						"DeletePaymentOrder",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders.API / GetAllPurchaseOrders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTYyOTksImV4cCI6MTYyMjQxOTg5OSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNzBCOUM0NjE3NDRFRkI0RUFGMUI2OUI4OUE4QzREREYiLCJpYXQiOjE2MjI0MTYyOTksInNjb3BlIjpbInByb3llY3QiXX0.CFy7j0KIXy2SDq754tzp8NRzTZxV2X614oEq9vIXIbmn3JwxSb-sOKaBv5uoDZMhB-_gedgYdD9AD2wRX8DcPterz-R1Y4aav0uFQs5s-9ORpmbmh7mDMQcyrkGQGLGHioTzxJRleDdF8TRtsj3wECtxcetsXapQ6yTWgfB8arO8SMyhakjlpvZ5eUTol_Bd6tjqLm3aZfxQMNEBRFQchck-XPGqipKUFJGMAyoP7V0O3YwLP6_1LkXiP-mVajWgC_97yayT6vBmneyHjzRGver2xg-R4IuVKmKLLDNSV3C4kE5XUQFXj9mvq4KggFo5dfh7U_hV6c6ave9QmjqlzA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5100/Orders/PurchaseOrder/GetAllPurchaseOrders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Orders",
+						"PurchaseOrder",
+						"GetAllPurchaseOrders"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders.API / GetPurchaseOrderById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5100/Orders/PurchaseOrder/GetPurchaseOrderById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Orders",
+						"PurchaseOrder",
+						"GetPurchaseOrderById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders.API / CreatePurchaseOrder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"purchaseOrderId\": 0,\n  \"clientName\": \"Mario Mujica\",\n  \"productName\": \"Jazz Album\",\n  \"quantity\": 3,\n  \"priceAmount\": 558700,\n  \"taxesAmount\": 10000,\n  \"totalAmount\": 568700,\n  \"paymentMethod\": \"TranksBank\",\n  \"createdDate\": \"2021-05-26T21:42:44.664Z\",\n  \"modifyDate\": \"2021-05-26T21:42:44.664Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5100/Orders/PurchaseOrder/CreatePurchaseOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Orders",
+						"PurchaseOrder",
+						"CreatePurchaseOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders.API / DeletePurchaseOrder",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5100/Orders/PurchaseOrder/DeletePurchaseOrder/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"Orders",
+						"PurchaseOrder",
+						"DeletePurchaseOrder",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aggregator / Purchase/ProcessPayment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY5NDA1RDkwRDM1RTYxNjM3OUMzQTZGMTU5NjIzMUNBIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MjI0MTY2NTMsImV4cCI6MTYyMjQyMDI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjAwIiwiY2xpZW50X2lkIjoiY2xpZW50IiwianRpIjoiNTIwQzRERTUxOUZBNjBDODBERURFMTYzQUQ5MEVCNTAiLCJpYXQiOjE2MjI0MTY2NTMsInNjb3BlIjpbInByb3llY3QiXX0.ZjD7QiQTerXOAx9f-iHJcdf3IOVYpwPvYkWheiSLYVrehMHMyuVrXCaFVVZforNCQ592Z2nqMyFNStzdDnQ2nVt_n8LYzgm7K-qOujZ2LbBSetOhb4xMga_kO0NeaGoFY6ue5LG5nAGqJrR0mpnWahpgh5LyIiVSHJxJ7Ah1otsNC0UkSrFeAeEdn4KrIlVfG7rGG-tdB0Bz_DAAAETpZ0B4rqiz_ihQGDJv8JXQJv1DjJ1RU4QUyuD9oNvb7_iMDWWxpNEi7qyS8HPBpatQhkXkgJGGoBTDgXkOfxrBlGWxyAThywn42lG2EF7tausnMVM_oDY5-798v2M6CG-Qlw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"clientName\": \"John Doe\",\n  \"productId\": 1,\n  \"quantity\": 2,\n  \"paymentOrderId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5100/PurchaseAggregation/Purchase/ProcessPayment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"PurchaseAggregation",
+						"Purchase",
+						"ProcessPayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IS4 / OpenId-configuration",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5200/.well-known/openid-configuration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						".well-known",
+						"openid-configuration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IS4 / Token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "proyect",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "client",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "secret",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5200/connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
