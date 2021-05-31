@@ -1,6 +1,6 @@
 # Caja18 - Prototype
 
-Este Proyecto consiste en el ejemplo de una arquitectura de microservicios, e incluye las siguientes APIs:
+Este Proyecto consiste en el ejemplo de una arquitectura de microservicios; esta desarrollado con .Net Core 3.1, e incluye las siguientes APIs:
 
 1. Identity Server: Servicio Identity Server 4 para la Autentificación y Autorización de usuarios.
 2. WebGateway : ApiGateway para los microservicios.
@@ -15,4 +15,3 @@ Dicho archivo se debe importar a Postman.
 
 Para la utlización de los diferentes endpoints, se debe crear un Token con "IS4 / Token".
 Dicho Token se debe pasar como parametro de "Authentification" en el header de todos los requests de cada endpoint, ya que todos estos requieren autentificación y autorización.
-
