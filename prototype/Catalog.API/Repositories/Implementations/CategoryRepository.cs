@@ -44,8 +44,6 @@ namespace Catalog.API.Repositories.Implementations
             return await _catalogContext
                 .Categories
                 .FindAsync(id);
-                //.Include(cat => cat.CategoryId == id)
-                //.FirstOrDefaultAsync();
         }
 
         public async Task<Category> Modify(Category entity)

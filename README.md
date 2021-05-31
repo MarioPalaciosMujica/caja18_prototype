@@ -11,6 +11,7 @@ Este Proyecto consiste en el ejemplo de una arquitectura de microservicios, e in
 
 Además, se añade el archivo: "caja18_prototype.postman_collection.json" <br>
 Para realizar pruebas del funcionamiento de toda la arquitectura.
+Dicho archivo se debe importar a Postman.
 
 Para la utlización de los diferentes endpoints, se debe crear un Token con "IS4 / Token".
 Dicho Token se debe pasar como parametro de "Authentification" en el header de todos los requests de cada endpoint, ya que todos estos requieren autentificación y autorización.
